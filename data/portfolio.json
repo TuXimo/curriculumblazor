@@ -1,0 +1,57 @@
+  {
+    "resume": {
+      "summary": [
+        "Software developer with experience in C# and Unity.",
+        "Passionate about creating innovative mechanics.",
+        "Looking to contribute to challenging projects."
+      ],
+      "professionalExperience": [
+        {
+          "title": "Jr. Software Developer",
+          "company": "Alpha Game Studio",
+          "period": "January 2022 - Present",
+          "achievements": [
+            "Developed inventory system and HUD.",
+            "Optimized code performance by 20%."
+          ]
+        }
+      ],
+      "education": [
+        {
+          "title": "Systems Engineering",
+          "institution": "National University of Cuyo",
+          "period": "2018 - 2024"
+        }
+      ],
+      "skills": [
+        {
+          "name": "Programming Languages",
+          "details": [ "C# (Advanced)", "C++ (Basic)" ]
+        },
+        {
+          "name": "Game Engines",
+          "details": [ "Unity", "Unreal Engine" ]
+        }
+      ]
+    },
+    "projects": [
+      {
+        "title": "My 2D Platformer Game",
+        "shortDescription": "A retro-style platformer game with unique mechanics.",
+        "mainImage": "/img/mishi.png",
+        "secondaryImages": [ "/img/a.png", "/img/b.png" ],
+        "projectLink": "https://maximobrunetti.itch.io/my-game-1",
+        "githubLink": "https://github.com/maximobrunetti/juego-1"
+      }
+    ],
+    "jams": [
+      {
+        "title": "Virtual Reality Adventure",
+        "shortDescription": "An immersive experience created for Oculus.",
+        "mainImage": "/img/project-vr.jpg",
+        "secondaryImages": [ "/img/project-vr-a.jpg", "/img/project-vr-b.jpg" ],
+        "projectLink": "https://maximobrunetti.com/vr-project",
+        "githubLink": ""
+      }
+    ]
+  }
