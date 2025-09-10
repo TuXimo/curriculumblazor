@@ -1,0 +1,14 @@
+[
+  {
+    "Name": "C#",
+    "IconPath": "icons/skills/csharp.png"
+  },
+  {
+    "Name": "Unity",
+    "IconPath": "icons/skills/unity.png"
+  },
+  {
+    "Name": "Unreal",
+    "IconPath": "icons/skills/unreal.png"
+  }
+]

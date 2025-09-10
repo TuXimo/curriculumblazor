@@ -1,57 +1,55 @@
-  {
-    "resume": {
-      "summary": [
-        "Software developer with experience in C# and Unity.",
-        "Passionate about creating innovative mechanics.",
-        "Looking to contribute to challenging projects."
-      ],
-      "professionalExperience": [
-        {
-          "title": "Jr. Software Developer",
-          "company": "Alpha Game Studio",
-          "period": "January 2022 - Present",
-          "achievements": [
-            "Developed inventory system and HUD.",
-            "Optimized code performance by 20%."
-          ]
-        }
-      ],
-      "education": [
-        {
-          "title": "Systems Engineering",
-          "institution": "National University of Cuyo",
-          "period": "2018 - 2024"
-        }
-      ],
-      "skills": [
-        {
-          "name": "Programming Languages",
-          "details": [ "C# (Advanced)", "C++ (Basic)" ]
-        },
-        {
-          "name": "Game Engines",
-          "details": [ "Unity", "Unreal Engine" ]
-        }
-      ]
-    },
-    "projects": [
+{
+  "resume": {
+    "summary": [
+      "Software developer with experience in C# and Unity.",
+      "Passionate about creating innovative mechanics.",
+      "Looking to contribute to challenging projects."
+    ],
+    "professionalExperience": [
       {
-        "title": "My 2D Platformer Game",
-        "shortDescription": "A retro-style platformer game with unique mechanics.",
-        "mainImage": "/img/mishi.png",
-        "secondaryImages": [ "/img/a.png", "/img/b.png" ],
-        "projectLink": "https://maximobrunetti.itch.io/my-game-1",
-        "githubLink": "https://github.com/maximobrunetti/juego-1"
+        "title": "Pasante en Programación de Animación",
+        "company": "Xowen Studios",
+        "period": "Julio 2025 - Septiembre 2025",
+        "achievements": [
+          "Realicé el proceso de limpieza y optimización de animaciones (cleanup) en Unreal Engine para mejorar la fidelidad de los movimientos y la eficiencia del proyecto.",
+          "Colaboré en la integración de animaciones en el motor del juego."
+        ]
+      },
+      {
+        "title": "Programador de Unity",
+        "company": "Abi Rached Studio (Estudio Independiente)",
+        "period": "Abril 2024 - Agosto 2025",
+        "achievements": [
+          "Desarrollo y programación de las mecánicas de jugabilidad y sistemas de combate para un videojuego de rol de acción estilo Hack and Slash.",
+          "Responsable de la implementación de sistemas de animación y lógica de enemigos en Unity."
+        ]
       }
     ],
-    "jams": [
+    "education": [
       {
-        "title": "Virtual Reality Adventure",
-        "shortDescription": "An immersive experience created for Oculus.",
-        "mainImage": "/img/project-vr.jpg",
-        "secondaryImages": [ "/img/project-vr-a.jpg", "/img/project-vr-b.jpg" ],
-        "projectLink": "https://maximobrunetti.com/vr-project",
-        "githubLink": ""
+        "title": "Tecnicatura en Desarrollo de Videojuegos",
+        "institution": "Universidad de Mendoza",
+        "period": "2020 - 2023"
       }
     ]
-  }
+  },
+  "projects": [
+    {
+      "title": "Tightrope Walker: Gyroscope",
+      "shortDescription": "Juego para móviles desarrollado en Unity, donde el control del personaje se basa en el giroscopio del dispositivo, simulando el equilibrio de un funambulista.",
+      "mainImage": "/img/projects/tw/main.png",
+      "secondaryImages": [ "/img/projects/tw/t1.png", "/img/projects/tw/t2.png", "/img/projects/tw/t3.png", "/img/projects/tw/t4.png" ],
+      "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
+      "githubLink": ""
+    },
+    {
+      "title": "Página Web Interactiva",
+      "shortDescription": "Un currículum interactivo alojado en www.3d.maximobrunetti.com.ar, desarrollado con Needle Engine y Three.js para crear una experiencia inmersiva.",
+      "mainImage": "/img/curriculum-3d.png",
+      "secondaryImages": [],
+      "projectLink": "https://3d.maximobrunetti.com.ar",
+      "githubLink": ""
+    }
+  ],
+  "jams": []
+}

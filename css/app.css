@@ -168,3 +168,12 @@ code {
     width: 100%;
     padding: 1.25rem;
 }
+
+.profile-image {
+    width: 200px; /* O el tamaño que desees, pero que sea igual al height */
+    height: 200px; /* Debe ser igual al width para un círculo perfecto */
+    border-radius: 50%; /* Esto es lo que hace la magia de la forma circular */
+    object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse, recortando si es necesario */
+    border: 1px solid #007bff; /* Opcional: añade un borde para darle un toque extra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra sutil */
+}
