@@ -10,5 +10,13 @@
   {
     "Name": "Unreal",
     "IconPath": "icons/skills/unreal.png"
+  },
+  {
+    "Name": "Blender",
+    "IconPath": "icons/skills/blender.png"
+  },
+  {
+    "Name": "JS/TS",
+    "IconPath": "icons/skills/ts.png"
   }
 ]

@@ -31,6 +31,22 @@
         "institution": "Universidad de Mendoza",
         "period": "2020 - 2023"
       }
+    ],
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "details": [
+          "C# (Advanced)",
+          "C++ (Basic)"
+        ]
+      },
+      {
+        "name": "Game Engines",
+        "details": [
+          "Unity",
+          "Unreal Engine"
+        ]
+      }
     ]
   },
   "projects": [
@@ -38,18 +54,55 @@
       "title": "Tightrope Walker: Gyroscope",
       "shortDescription": "Juego para móviles desarrollado en Unity, donde el control del personaje se basa en el giroscopio del dispositivo, simulando el equilibrio de un funambulista.",
       "mainImage": "/img/projects/tw/main.png",
-      "secondaryImages": [ "/img/projects/tw/t1.png", "/img/projects/tw/t2.png", "/img/projects/tw/t3.png", "/img/projects/tw/t4.png" ],
+      "secondaryImages": [
+        "/img/projects/tw/t1.png",
+        "/img/projects/tw/t2.png",
+        "/img/projects/tw/t3.png",
+        "/img/projects/tw/t4.png"
+      ],
       "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
       "githubLink": ""
     },
     {
       "title": "Página Web Interactiva",
       "shortDescription": "Un currículum interactivo alojado en www.3d.maximobrunetti.com.ar, desarrollado con Needle Engine y Three.js para crear una experiencia inmersiva.",
-      "mainImage": "/img/curriculum-3d.png",
+      "mainImage": "/img/projects/3d/m1.png",
       "secondaryImages": [],
       "projectLink": "https://3d.maximobrunetti.com.ar",
       "githubLink": ""
     }
   ],
-  "jams": []
+  "jams": [
+    {
+      "title": "La Última Risa",
+      "shortDescription": "Juego desarrollado para la Global Game Jam 2024.",
+      "mainImage": "/img/jams/lr/m1.png",
+      "secondaryImages": [
+        "/img/jams/lr/s1.png",
+        "/img/jams/lr/s2.png",
+        "/img/jams/lr/s3.png"
+
+      ],
+      "projectLink": "https://tinincho.itch.io/la-ultima-risa",
+      "githubLink": ""
+    },
+    {
+      "title": "Simulador de Terremotos (Proyecto Universitario)",
+      "shortDescription": "Simulador académico desarrollado para la universidad, enfocado en simular un terremoto y localizado en varios idiomas para una audiencia global.",
+      "mainImage": "/img/jams/earths/m1.png",
+      "secondaryImages": [
+        "/img/jams/earths/s1.png"
+      ],
+      "projectLink": "https://tuximo.itch.io/school-earthquake-quiz",
+      "githubLink": ""
+    },
+    {
+      "title": "Sorpresas Amargas",
+      "shortDescription": "Juego de horror psicológico en 2D desarrollado en 3 días para una Game Jam.",
+      "mainImage": "/img/jams/sa/main.png",
+      "secondaryImages": [ "/img/jams/sa/sec.png" ],
+      "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
+      "githubLink": ""
+    }
+  ]
 }
