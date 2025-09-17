@@ -10,6 +10,14 @@ a, .btn-link {
     color: #0071c1;
 }
 
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 2rem;
+    color: #444;
+}
+
 .btn-primary {
     color: #fff;
     background-color: #1b6ec2;

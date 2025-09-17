@@ -1,22 +1,44 @@
 [
   {
     "Name": "C#",
-    "IconPath": "icons/skills/csharp.png"
+    "IconPath": "icons/skills/csharp.png",
+    "Proficiency": 4,
+    "Description": "Sólida experiencia en C# con un enfoque principal en el desarrollo de videojuegos en el motor Unity. Poseo un amplio conocimiento de patrones de diseño (como Singleton, Observer y Factory) y buenas prácticas. Además, he trabajado con el entorno .NET, incluyendo proyectos con ASP.NET y Blazor, lo que me permite crear aplicaciones web como esta."
   },
   {
     "Name": "Unity",
-    "IconPath": "icons/skills/unity.png"
+    "IconPath": "icons/skills/unity.png",
+    "Proficiency": 4,
+    "Description": "Programador con experiencia en el motor Unity, con un enfoque en el desarrollo de juegos 3D. Destaco en la programación de mecánicas de juego, la creación de simuladores y la implementación de sistemas de interfaz de usuario (UI). También me he familiarizado con la integración y modificación de assets, y poseo conocimientos de ShaderLab para la creación de efectos visuales y la optimización de rendimiento para plataformas móviles."
   },
   {
     "Name": "Unreal",
-    "IconPath": "icons/skills/unreal.png"
+    "IconPath": "icons/skills/unreal.png",
+    "Proficiency": 3,
+    "Description": "He trabajado con el motor Unreal, enfocándome en la creación de entornos 3D, incluyendo landscapes y plataformas. Tengo experiencia en la integración de assets, el prototipado de proyectos de realidad virtual (VR) y el trabajo con animaciones."
   },
   {
     "Name": "Blender",
-    "IconPath": "icons/skills/blender.png"
+    "IconPath": "icons/skills/blender.png",
+    "Proficiency": 3,
+    "Description": "He modelado y texturizado en 3D con Blender, con un enfoque en la optimización de modelos con alta densidad de polígonos y múltiples materiales. Poseo experiencia en la creación de animaciones desde cero,ándolas directamente en mis proyectos de videojuegos."
   },
   {
     "Name": "JS/TS",
-    "IconPath": "icons/skills/ts.png"
+    "IconPath": "icons/skills/ts.png",
+    "Proficiency": 2,
+    "Description": "Tengo conocimientos de JavaScript y TypeScript, principalmente aplicados en el desarrollo de experiencias interactivas y web. Poseo experiencia trabajando con Needle Engine dentro de Unity y con la biblioteca Three.js para proyectos 3D en la web. Además, tengo experiencia básica en la creación de páginas web."
+  },
+  {
+    "Name": "Git",
+    "IconPath": "icons/skills/git.png",
+    "Proficiency": 4,
+    "Description": "Tengo experiencia en el uso de Git tanto en proyectos individuales como en equipos, demostrando un sólido entendimiento del flujo de trabajo de control de versiones. Utilizo commits y tags de manera estratégica como puntos de control para la gestión del historial de código. He trabajado con plataformas como GitHub y GitLab para la colaboración y el despliegue de proyectos."
+  },
+  {
+    "Name": "Photoshop",
+    "IconPath": "icons/skills/photoshop.png",
+    "Proficiency": 3,
+    "Description": "Manejo básico de Adobe Photoshop para la edición de imágenes, redimensión y adaptación para diferentes plataformas. Poseo experiencia en la creación de elementos de interfaz de usuario (UI), como textos, para su implementación en proyectos."
   }
 ]
