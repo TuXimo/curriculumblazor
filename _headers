@@ -1,7 +1,9 @@
 /*
-  Content-Security-Policy: default-src 'self' blob: data:; 
-  script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: data:; 
-  style-src 'self' 'unsafe-inline' blob: data:; 
-  img-src 'self' data: blob:; 
-  connect-src 'self' *; 
-  frame-src 'self' blob:;
+  Content-Security-Policy: 
+    default-src 'self' blob: data: https://cdnjs.cloudflare.com https://cdn.jsdelivr.net; 
+    script-src 'self' 'unsafe-inline' 'unsafe-eval' blob: https://cdn.jsdelivr.net; 
+    style-src 'self' 'unsafe-inline' blob: https://cdnjs.cloudflare.com; 
+    img-src 'self' data: blob: https://cdnjs.cloudflare.com; 
+    connect-src 'self' blob: https://*.azurewebsites.net https://*.netlify.app; 
+    font-src 'self' https://cdnjs.cloudflare.com; 
+    frame-src 'self' blob:;
