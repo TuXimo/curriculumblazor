@@ -106,6 +106,14 @@ a, .btn-link {
     content: var(--blazor-load-percentage-text, "Loading");
 }
 
+.list-unstyled li {
+    min-height: 5rem; /* Un alto que deje espacio para el ícono y el botón */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
 code {
     color: #c02d76;
 }
