@@ -1,0 +1,107 @@
+{
+  "resume": {
+    "summary": [
+      "I am a software developer with experience in C# and Unity.",
+      "I am passionate about creating innovative mechanics.",
+      "I am looking to contribute to challenging projects."
+    ],
+    "professionalExperience": [
+      {
+        "title": "Animation Programming Intern",
+        "company": "Xowen Studios",
+        "period": "July 2025 - September 2025",
+        "achievements": [
+          "I performed the animation cleanup and optimization process in Unreal Engine to improve the movement fidelity and project efficiency.",
+          "I collaborated in integrating animations into the game engine."
+        ]
+      },
+      {
+        "title": "Unity Programmer",
+        "company": "Abi Rached Studio (Independent Studio)",
+        "period": "April 2024 - August 2025",
+        "achievements": [
+          "Developed and programmed gameplay mechanics and combat systems for a hack and slash style action role-playing game.",
+          "Responsible for implementing animation systems and enemy logic in Unity."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "title": "Associate Degree in Video Game Development",
+        "institution": "University of Mendoza",
+        "period": "2020 - 2023"
+      }
+    ],
+    "skills": [
+      {
+        "name": "Programming Languages",
+        "details": [
+          "C# (Advanced)",
+          "C++ (Basic)"
+        ]
+      },
+      {
+        "name": "Game Engines",
+        "details": [
+          "Unity",
+          "Unreal Engine"
+        ]
+      }
+    ]
+  },
+  "projects": [
+    {
+      "title": "Tightrope Walker: Gyroscope",
+      "shortDescription": "A mobile game developed in Unity, where the character's control is based on the device's gyroscope, simulating the balance of a tightrope walker.",
+      "mainImage": "/img/projects/tw/main.png",
+      "secondaryImages": [
+        "/img/projects/tw/t1.png",
+        "/img/projects/tw/t2.png",
+        "/img/projects/tw/t3.png",
+        "/img/projects/tw/t4.png"
+      ],
+      "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
+      "githubLink": ""
+    },
+    {
+      "title": "Interactive Website",
+      "shortDescription": "An interactive resume hosted on www.3d.maximobrunetti.com.ar, developed with Needle Engine and Three.js to create an immersive experience.",
+      "mainImage": "/img/projects/3d/m1.png",
+      "secondaryImages": [],
+      "projectLink": "https://3d.maximobrunetti.com.ar",
+      "githubLink": ""
+    }
+  ],
+  "jams": [
+    {
+      "title": "The Last Laugh",
+      "shortDescription": "A game developed for the Global Game Jam 2024.",
+      "mainImage": "/img/jams/lr/m1.png",
+      "secondaryImages": [
+        "/img/jams/lr/s1.png",
+        "/img/jams/lr/s2.png",
+        "/img/jams/lr/s3.png"
+      ],
+      "projectLink": "https://tinincho.itch.io/la-ultima-risa",
+      "githubLink": ""
+    },
+    {
+      "title": "Earthquake Simulator (University Project)",
+      "shortDescription": "An academic simulator developed for the university, focused on simulating an earthquake and localized in several languages for a global audience.",
+      "mainImage": "/img/jams/earths/m1.png",
+      "secondaryImages": [
+        "/img/jams/earths/s1.png"
+      ],
+      "projectLink": "https://tuximo.itch.io/school-earthquake-quiz",
+      "githubLink": ""
+    },
+    {
+      "title": "Bitter Surprises",
+      "shortDescription": "A 2D psychological horror game developed in 3 days for a Game Jam.",
+      "mainImage": "/img/jams/sa/main.png",
+      "secondaryImages": [ "/img/jams/sa/sec.png" ],
+      "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
+      "githubLink": ""
+    }
+  ]
+}
