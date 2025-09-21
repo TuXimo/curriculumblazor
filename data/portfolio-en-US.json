@@ -7,7 +7,7 @@
     ],
     "professionalExperience": [
       {
-        "title": "Animation Programming Intern",
+        "title": "Animation Clean Up (Intern)",
         "company": "Xowen Studios",
         "period": "July 2025 - September 2025",
         "achievements": [
@@ -27,7 +27,7 @@
     ],
     "education": [
       {
-        "title": "Associate Degree in Video Game Development",
+        "title": "Technician in Video Game Development",
         "institution": "University of Mendoza",
         "period": "2020 - 2023"
       }
@@ -64,7 +64,7 @@
       "githubLink": ""
     },
     {
-      "title": "Interactive Website",
+      "title": "Interactive Personal Website",
       "shortDescription": "An interactive resume hosted on www.3d.maximobrunetti.com.ar, developed with Needle Engine and Three.js to create an immersive experience.",
       "mainImage": "/img/projects/3d/m1.png",
       "secondaryImages": [],
@@ -99,7 +99,9 @@
       "title": "Bitter Surprises",
       "shortDescription": "A 2D psychological horror game developed in 3 days for a Game Jam.",
       "mainImage": "/img/jams/sa/main.png",
-      "secondaryImages": [ "/img/jams/sa/sec.png" ],
+      "secondaryImages": [
+        "/img/jams/sa/sec.png"
+      ],
       "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
       "githubLink": ""
     }
