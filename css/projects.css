@@ -2,16 +2,18 @@
     border-radius: 10px;
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px var(--shadow-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
     min-height: 400px;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
 }
 
-    .project-card:hover {
-        transform: translateY(-5px);
-        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    }
+.project-card:hover {
+    transform: translateY(-5pcard x);
+    box-shadow: 0 8px 16px var(--shadow-color);
+}
 
 .project-image-container {
     position: relative;
@@ -20,15 +22,15 @@
     overflow: hidden;
 }
 
-    .project-image-container img.card-img-top {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        transition: opacity 0.5s ease-in-out;
-    }
+.project-image-container img.card-img-top {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity 0.5s ease-in-out;
+}
 
 .project-hover-images {
     position: absolute;
@@ -58,17 +60,18 @@
 }
 
 .card-body {
-    background-color: #f8f9fa;
+    background-color: var(--bg-secondary);
+    color: var(--text-primary);
     position: absolute;
-    bottom: 0;
+    bottom: 0;  
     width: 100%;
     padding: 1.25rem;
 }
 
 .profile-image {
-    width: 300px; /* O el tamaño que desees, pero que sea igual al height */
-    height: 300px; /* Debe ser igual al width para un círculo perfecto */
-    border-radius: 50%; /* Esto es lo que hace la magia de la forma circular */
-    object-fit: cover; /* Esto asegura que la imagen cubra el área sin distorsionarse, recortando si es necesario */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Opcional: añade una sombra sutil */
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    box-shadow: 0 0 10px var(--shadow-color);
 }
