@@ -1,0 +1,113 @@
+/* variables.css */
+:root {
+    /* Colores base para Light Mode */
+    --light-background: #ffffff;
+    --light-text-color: #212529;
+    --light-section-title-color: #444;
+    --light-link-color: #0071c1;
+    --light-brand-name-color: #333;
+    --light-nav-icon-color: #333;
+    --light-shadow-color: rgba(0, 0, 0, 0.1);
+    --light-card-body-background: rgba(255, 255, 255, 1);
+    --light-profile-image-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    --light-text-secondary: #6c757d; /* Un gris para texto secundario */
+    --light-border-color: #dee2e6; /* Un borde claro */
+    --light-skill-icon-hover-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+    --light-skills-animation-area-background: #e8e8e8;
+    --navbar-light-background-blurred: rgba(255, 255, 255, 0.9);
+    --navbar-toggler-light-filter: invert(0);
+
+    /* Colores base para Dark Mode */
+    --dark-background: #0e0e0e;
+    --dark-text-color: #f1f1f1;
+    --dark-card-background: #1e1e1e;
+    --dark-border-color: #444;
+    --dark-box-shadow: rgba(255, 255, 255, 0.05);
+    --dark-h5-color: #eee;
+    --dark-p-li-color: #ccc;
+    --dark-skill-description-color: #bbb;
+    --dark-nav-icon-color: #ddd;
+    --dark-nav-link-hover-color: #00ff99;
+    --dark-skills-animation-area-background: #2a2a2a;
+    --dark-nav-tabs-active-background: #2a2a2a;
+    --dark-nav-tabs-active-border-color: #666;
+    --dark-shadow-color: rgba(0, 0, 0, 0.5);
+    --dark-profile-image-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+    --dark-text-secondary: #a0a0a0; /* Un gris claro para texto secundario en dark mode */
+    --dark-skill-icon-hover-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+    --navbar-dark-background-blurred: rgba(18, 18, 18, 0.9);
+    --navbar-dark-border-bottom: 1px solid #333;
+    --navbar-toggler-dark-filter: invert(1);
+
+    /* Colores de Bootstrap y otros */
+    --bootstrap-blue: #0d6efd;
+    --bootstrap-primary-button-background: #1b6ec2;
+    --bootstrap-primary-button-border: #1861ac;
+    --bootstrap-primary-button-dark-background: #0d6efd;
+    --bootstrap-primary-button-dark-border: #0a58ca;
+    --dark-button-background: #333;
+    --dark-button-border: #444;
+    --dark-button-hover-background: #555;
+
+    /* Colores de estado */
+    --valid-outline-color: #26b050;
+    --invalid-outline-color: red;
+    --validation-message-color: red;
+    --focus-box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+
+    /* Fuentes */
+    --font-family-base: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --font-weight-bold: 700;
+
+    /* Tamaños */
+    --navbar-height: 70px;
+    --section-title-font-size: 2.5rem;
+    --brand-name-font-size: 1.9rem;
+    --brand-icon-font-size: 1.6rem;
+    --nav-icon-font-size: 1.2rem;
+    --section-margin-bottom: 2rem;
+    --list-item-min-height: 5rem;
+
+    /* Variables específicas de Project Card */
+    --project-card-border-radius: 10px;
+    --project-card-min-height: 400px;
+    --project-image-aspect-ratio: 56.25%; /* 16:9 Aspect Ratio */
+    --project-card-padding: 1.25rem;
+
+    /* Variables específicas de Profile Image */
+    --profile-image-size: 300px;
+    --profile-image-border-radius: 50%;
+
+    /* Variables específicas de NavMenu (Layout/NavMenu.razor.css) */
+    --navbar-scrolled-background: rgba(25, 25, 25, 0.7);
+    --navbar-scrolled-box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    --navbar-scrolled-link-icon-color: rgba(255, 255, 255, 0.8);
+    --navbar-link-icon-font-weight: 500;
+    --navbar-link-icon-margin: 0 15px;
+    --navbar-toggler-icon-light-stroke: rgba(51, 51, 51, 0.8);
+    --navbar-toggler-icon-dark-stroke: rgba(255, 255, 255, 0.8);
+
+    /* Variables específicas de Skills Section */
+    --skills-main-container-height: 400px;
+    --skills-icons-animation-area-flex-basis: 50%;
+    --skill-icon-size: 80px;
+    --skill-icon-border-radius: 12px;
+    --skill-icon-hover-transform: scale(1.3);
+    --skills-details-padding: 1.5rem;
+    --skill-title-font-size: 2rem;
+    --skill-title-font-weight: 600;
+    --skill-title-margin-bottom: 0.5rem;
+    --skill-description-font-size: 1rem;
+    --skill-description-line-height: 1.6;
+    --skill-level-text-font-size: 1.2rem;
+    --skill-level-text-font-weight: 500;
+    --skill-level-text-margin-bottom: 1rem;
+    --skill-level-gap: 6px;
+    --skill-level-margin: 10px 0;
+    --level-block-width: 40px;
+    --level-block-height: 15px;
+    --level-block-border-radius: 4px;
+    --level-block-filled-background: #00ff66;
+    --level-block-filled-shadow: 0 0 5px #00ff66;
+    --level-block-filled-hover-transform: scale(1.1);
+}

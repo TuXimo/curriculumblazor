@@ -1,24 +1,34 @@
 ﻿.project-card {
-    border-radius: 10px;
+    border-radius: var(--project-card-border-radius);
     overflow: hidden;
     position: relative;
-    box-shadow: 0 4px 8px var(--shadow-color);
+    box-shadow: 0 4px 8px var(--light-shadow-color);
     transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
-    min-height: 400px;
-    background-color: var(--bg-main);
-    color: var(--text-primary);
+    min-height: var(--project-card-min-height);
+    background-color: var(--light-background);
+    color: var(--light-text-color);
+}
+
+body.dark-mode .project-card {
+    box-shadow: 0 4px 8px var(--dark-shadow-color);
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
 }
 
 .project-card:hover {
-    transform: translateY(-5pcard x);
-    box-shadow: 0 8px 16px var(--shadow-color);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px var(--light-shadow-color);
+}
+
+body.dark-mode .project-card:hover {
+    box-shadow: 0 8px 16px var(--dark-shadow-color);
 }
 
 .project-image-container {
     position: relative;
     width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
+    padding-top: var(--project-image-aspect-ratio); /* 16:9 Aspect Ratio */
     overflow: hidden;
 }
 
@@ -60,18 +70,30 @@
 }
 
 .card-body {
-    background-color: var(--bg-secondary);
-    color: var(--text-primary);
+    background-color: var(--light-card-body-background);
+    color: var(--light-text-color);
     position: absolute;
     bottom: 0;  
     width: 100%;
-    padding: 1.25rem;
+    padding: var(--project-card-padding);
+    z-index: 2;
+    
+    /* Light mode background: semi-transparent white. Overridden in app.css for dark mode. */
+}
+
+body.dark-mode .card-body {
+    background-color: var(--dark-card-background);
+    color: var(--dark-text-color);
 }
 
 .profile-image {
-    width: 300px;
-    height: 300px;
-    border-radius: 50%;
+    width: var(--profile-image-size);
+    height: var(--profile-image-size);
+    border-radius: var(--profile-image-border-radius);
     object-fit: cover;
-    box-shadow: 0 0 10px var(--shadow-color);
+    box-shadow: var(--light-profile-image-shadow);
+}
+
+body.dark-mode .profile-image {
+    box-shadow: var(--dark-profile-image-shadow);
 }
