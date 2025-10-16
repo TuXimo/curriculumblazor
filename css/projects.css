@@ -85,15 +85,3 @@ body.dark-mode .card-body {
     background-color: var(--dark-card-background);
     color: var(--dark-text-color);
 }
-
-.profile-image {
-    width: var(--profile-image-size);
-    height: var(--profile-image-size);
-    border-radius: var(--profile-image-border-radius);
-    object-fit: cover;
-    box-shadow: var(--light-profile-image-shadow);
-}
-
-body.dark-mode .profile-image {
-    box-shadow: var(--dark-profile-image-shadow);
-}

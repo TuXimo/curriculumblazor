@@ -264,11 +264,3 @@ body.dark-mode .brand-name {
 code {
     color: #c02d76;
 }
-
-#about-me {
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    margin-top: calc(-1 * var(--navbar-height)); /* Compensa el padding del body para que la sección ocupe toda la pantalla */
-    padding-top: var(--navbar-height); /* Asegura que el contenido dentro de la sección no quede debajo del navbar */
-}

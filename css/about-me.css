@@ -1,0 +1,64 @@
+/* --- Estilos para la sección About Me --- */
+
+#about-me {
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    margin-top: calc(-1 * var(--navbar-height)); /* Compensa el padding del body */
+    padding-top: var(--navbar-height); /* Evita que el contenido quede debajo del navbar */
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+
+    /* Colores por defecto para el modo claro */
+    background-color: var(--light-background);
+    color: var(--light-text-color);
+}
+
+/* Anulación para el modo oscuro */
+body.dark-mode #about-me {
+    background-color: var(--dark-background);
+    color: var(--dark-text-color);
+}
+
+/* Contenedor de las partículas de fondo */
+#particles-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0; /* Detrás de todo */
+}
+
+/* Contenedor del texto flotante */
+#code-text-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 1; /* Encima de las partículas pero debajo del contenido */
+}
+
+/* Contenido principal (texto, imagen, etc.) */
+#about-me .container {
+    position: relative;
+    z-index: 2; /* Encima de los efectos de fondo */
+}
+
+/* Imagen de perfil */
+.profile-image {
+    width: var(--profile-image-size);
+    height: var(--profile-image-size);
+    border-radius: var(--profile-image-border-radius);
+    object-fit: cover;
+    box-shadow: var(--light-profile-image-shadow);
+}
+
+body.dark-mode .profile-image {
+    box-shadow: var(--dark-profile-image-shadow);
+}

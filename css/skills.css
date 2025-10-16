@@ -59,7 +59,7 @@ body.dark-mode .skill-icon-container img:hover {
 /* Lado derecho: Sección de detalles */
 .skills-details {
     flex: 1;
-    background-color: var(--light-background);
+    background-color: var(--light-skills-details-background);
     color: var(--light-text-color);
     padding: var(--skills-details-padding);
     display: flex;

@@ -3,6 +3,7 @@
     background-color: var(--navbar-light-background-blurred);
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: var(--navbar-light-border-bottom);
 }
 
 .navbar .nav-link {
