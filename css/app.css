@@ -135,6 +135,11 @@ a, .btn-link {
     color: var(--light-section-title-color);
 }
 
+/* Dark mode para los títulos de sección */
+body.dark-mode .section-title {
+    color: var(--dark-text-color); /* Usa el color de texto principal del modo oscuro */
+}
+
 .btn-primary {
     color: #fff;
     background-color: var(--bootstrap-primary-button-background);

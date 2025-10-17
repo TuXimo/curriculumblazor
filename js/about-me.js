@@ -2,7 +2,8 @@
 let activeAnimations = {
     tsParticlesInstance: null,
     animeInstances: [],
-    intervals: []
+    intervals: [],
+    profileImageTilt: { handler: null, element: null } // Para el nuevo efecto
 };
 
 // Función para limpiar todas las animaciones y temporizadores activos
@@ -23,6 +24,9 @@ export function destroyCodeParticles() {
 
     // Limpiar los contenedores HTML
     const particlesContainer = document.getElementById("particles-container");
+
+    // Limpiar el efecto de la imagen de perfil
+    disposeProfileImageTilt();
     if (particlesContainer) particlesContainer.innerHTML = '';
 
     const codeTextContainer = document.getElementById('code-text-container');
@@ -40,7 +44,7 @@ export async function createCodeParticles() {
         : '--bootstrap-primary-button-background';
     const particleColor = getComputedStyle(document.documentElement).getPropertyValue(colorVar).trim();
 
-    const allRandomWords = ["xd", "jamon", "p0lent4", "wach0s", "arg", "Xdd", "zzz"];
+    const allRandomWords = ["xd", "jamon", "wach0s", "abc", "max", "zzz"];
     const maxLength = 5; // Límite máximo de caracteres para las palabras
     const randomWords = allRandomWords.filter(word => word.length <= maxLength);
 
@@ -58,9 +62,16 @@ export async function createCodeParticles() {
         interactivity: {
             events: {
                 onhover: { enable: true, mode: "repulse" },
-                onclick: { enable: true, mode: "push" }
+                onclick: { enable: true, mode: "push" },
+            },
+            modes: {
+                repulse: {
+                    distance: 120, // Distancia a la que reaccionan las partículas (antes 200 por defecto)
+                    speed: 0.5,    // Velocidad de la repulsión (antes 1 por defecto)
+                },
             }
-        }
+        },
+        detectRetina: true,
     });
 
     // --- Anime.js: letras flotantes ---
@@ -88,5 +99,56 @@ export async function createCodeParticles() {
             }
         }, 8000 + Math.random() * 5000);
         activeAnimations.intervals.push(intervalId);
+    }
+}
+
+// --- Efecto de inclinación (tilt) para la imagen de perfil ---
+
+function handleProfileImageMove(e) {
+    const img = e.currentTarget;
+    const { left, top, width, height } = img.getBoundingClientRect();
+
+    // Coordenadas del mouse relativas al centro de la imagen
+    const x = e.clientX - left - width / 2;
+    const y = e.clientY - top - height / 2;
+
+    // Factor de rotación (ajústalo para más o menos efecto)
+    const factor = 0.05;
+
+    // Calcular la rotación en los ejes X e Y
+    // La rotación en Y depende de la posición X del mouse y viceversa
+    const rotateY = x * factor;
+    const rotateX = -y * factor;
+
+    // Aplicar la transformación
+    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+}
+
+function handleProfileImageLeave(e) {
+    // Resetear la transformación cuando el mouse sale
+    e.currentTarget.style.transform = 'rotateX(0deg) rotateY(0deg)';
+}
+
+export function initializeProfileImageTilt() {
+    const img = document.querySelector('.profile-image');
+    if (img) {
+        activeAnimations.profileImageTilt.element = img;
+        
+        // Guardamos las referencias a las funciones para poder removerlas después
+        const moveHandler = (e) => handleProfileImageMove(e);
+        const leaveHandler = (e) => handleProfileImageLeave(e);
+
+        activeAnimations.profileImageTilt.handlers = { moveHandler, leaveHandler };
+
+        img.addEventListener('mousemove', moveHandler);
+        img.addEventListener('mouseleave', leaveHandler);
+    }
+}
+
+export function disposeProfileImageTilt() {
+    const { element, handlers } = activeAnimations.profileImageTilt;
+    if (element && handlers) {
+        element.removeEventListener('mousemove', handlers.moveHandler);
+        element.removeEventListener('mouseleave', handlers.leaveHandler);
     }
 }
