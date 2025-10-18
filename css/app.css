@@ -1,7 +1,8 @@
 html, body {
     font-family: var(--font-family-base);
     scroll-behavior: smooth; /* Para un desplazamiento suave al hacer clic en los enlaces del nav */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    transition: background-color 0.3s ease, color 0.3s ease;    
+    overflow-x: hidden; /* Evita el scroll horizontal en toda la página */
 }
 
 /*
@@ -200,45 +201,87 @@ body.dark-mode .section-title {
     content: "An error has occurred.";
 }
 
-.loading-progress {
-    position: relative;
-    display: block;
-    width: 8rem;
-    height: 8rem;
-    margin: 20vh auto 1rem auto;
-}
-
-.loading-progress circle {
-    fill: none;
-    stroke: #e0e0e0;
-    stroke-width: 0.6rem;
-    transform-origin: 50% 50%;
-    transform: rotate(-90deg);
-}
-
-.loading-progress circle:last-child {
-    stroke: var(--bootstrap-primary-button-background);
-    stroke-dasharray: calc(3.141 * var(--blazor-load-percentage, 0%) * 0.8), 500%;
-    transition: stroke-dasharray 0.05s ease-in-out;
-}
-
-.loading-progress-text {
-    position: absolute;
-    text-align: center;
-    font-weight: bold;
-    inset: calc(20vh + 3.25rem) 0 auto 0.2rem;
-}
-
-.loading-progress-text:after {
-    content: var(--blazor-load-percentage-text, "Loading");
-}
-
-.list-unstyled li {
-    min-height: var(--list-item-min-height); /* Un alto que deje espacio para el cono y el botn */
+/* --- Estilos para la pantalla de carga de la "computadorita" --- */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #1a1a1a; /* Fondo oscuro para que resalte */
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
+    z-index: 9999;
+    transition: opacity 1s ease;
+}
+
+.loading-overlay.fade-out {
+    opacity: 0;
+}
+
+/* Mensaje */
+.loading-message {
+    margin-top: 20px;
+    color: #f0f0f0;
+    font-family: monospace;
+    font-size: 1.2rem;
+}
+
+.loader-computer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.monitor {
+    width: 150px;
+    height: 110px;
+    background-color: #d3d3d3; /* Gris claro para el monitor */
+    border-radius: 10px 10px 0 0;
+    padding: 10px;
+    box-shadow: inset 0 0 5px rgba(0,0,0,0.3);
+    border: 2px solid #b0b0b0;
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    background-color: #222; /* Pantalla oscura */
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    padding-left: 5px;
+    overflow: hidden;
+    position: relative;
+}
+
+.cursor {
+    width: 8px;
+    height: 16px;
+    background-color: #0f0; /* Cursor verde brillante */
+    animation: blink 1s step-end infinite;
+}
+
+.stand {
+    width: 30px;
+    height: 20px;
+    background-color: #c0c0c0; /* Un poco más oscuro que el monitor */
+    border-left: 2px solid #b0b0b0;
+    border-right: 2px solid #b0b0b0;
+}
+
+.base {
+    width: 80px;
+    height: 10px;
+    background-color: #b0b0b0; /* El más oscuro de los grises */
+    border-radius: 0 0 5px 5px;
+}
+
+@keyframes blink {
+    from, to { background-color: transparent; }
+    50% { background-color: #0f0; }
 }
 
 .brand-name {

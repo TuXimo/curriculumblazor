@@ -1,6 +1,6 @@
 /* --- Estilos para la sección About Me --- */
 
-#about-me {
+#home {
     position: relative;
     overflow: hidden;
     height: calc(100vh - var(--navbar-height)); /* Altura de la ventana menos la barra de navegación */
@@ -16,7 +16,7 @@
 }
 
 /* Anulación para el modo oscuro */
-body.dark-mode #about-me {
+body.dark-mode #home {
     background-color: var(--dark-background);
     color: var(--dark-text-color);
 }
@@ -55,7 +55,7 @@ body.dark-mode #code-text-container {
 }
 
 /* Contenido principal (texto, imagen, etc.) */
-#about-me .container {
+#home .container {
     position: relative;
     z-index: 2; /* Encima de los efectos de fondo */
 }

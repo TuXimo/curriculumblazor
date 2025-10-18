@@ -38,16 +38,36 @@
             getBrowserLanguage: () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
         };
     </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const overlay = document.getElementById("loading-overlay");
+            if (overlay) {
+                setTimeout(() => {
+                    overlay.classList.add("fade-out");
+                    setTimeout(() => overlay.remove(), 1000); // lo remueve del DOM después del fade
+                }, 800); // pequeño delay para que se vea la animación
+            }
+        });
+    </script>
 </head>
 
 <body>
     <div id="app">
-        <svg class="loading-progress">
-            <circle r="40%" cx="50%" cy="50%" />
-            <circle r="40%" cx="50%" cy="50%" />
-        </svg>
-        <div class="loading-progress-text"></div>
+        <div class="loading-overlay" id="loading-overlay">
+            <div class="loader-computer">
+                <div class="monitor">
+                    <div class="screen">
+                        <span class="cursor"></span>
+                    </div>
+                </div>
+                <div class="stand"></div>
+                <div class="base"></div>
+            </div>
+            <p class="loading-message">Loading...</p>
+        </div>
     </div>
+
 
     <div id="blazor-error-ui">
         An unhandled error has occurred.
