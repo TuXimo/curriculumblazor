@@ -28,7 +28,6 @@ body.dark-mode .nav-link {
 
 body.dark-mode .nav-link:hover {
     color: var(--dark-nav-link-hover-color);
-    text-shadow: var(--bootstrap-blue-neon-shadow);
 }
 
 /* --- ICONOS (globo y sol/luna) --- */

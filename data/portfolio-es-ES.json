@@ -61,7 +61,13 @@
         "/img/projects/tw/t4.png"
       ],
       "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
-      "githubLink": ""
+      "githubLink": "",
+      "technologies": [
+        "android-plain",
+        "csharp-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     },
     {
       "title": "Página Web Interactiva",
@@ -69,7 +75,13 @@
       "mainImage": "/img/projects/3d/m1.png",
       "secondaryImages": [],
       "projectLink": "https://3d.maximobrunetti.com.ar",
-      "githubLink": ""
+      "githubLink": "",
+      "technologies": [
+        "threejs-original",
+        "typescript-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     }
   ],
   "jams": [
@@ -84,7 +96,8 @@
 
       ],
       "projectLink": "https://tinincho.itch.io/la-ultima-risa",
-      "githubLink": ""
+      "githubLink": "",
+      "technologies": [ "csharp-plain", "unity-plain" ]
     },
     {
       "title": "Simulador de Terremotos (Proyecto Universitario)",
@@ -94,7 +107,12 @@
         "/img/jams/earths/s1.png"
       ],
       "projectLink": "https://tuximo.itch.io/school-earthquake-quiz",
-      "githubLink": ""
+      "githubLink": "",
+      "technologies": [
+        "csharp-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     },
     {
       "title": "Sorpresas Amargas",
@@ -102,7 +120,8 @@
       "mainImage": "/img/jams/sa/main.png",
       "secondaryImages": [ "/img/jams/sa/sec.png" ],
       "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
-      "githubLink": ""
+      "githubLink": "",
+      "technologies": [ "csharp-plain", "unity-plain" ]
     }
   ]
 }

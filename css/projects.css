@@ -1,13 +1,20 @@
-﻿.project-card {
+﻿﻿﻿﻿﻿﻿﻿.project-card {
     border-radius: var(--project-card-border-radius);
     overflow: hidden;
     position: relative;
     box-shadow: 0 4px 8px var(--light-shadow-color);
-    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
     cursor: pointer;
     min-height: var(--project-card-min-height);
     background-color: var(--light-background);
+    height: 100%; /* Asegura que la tarjeta ocupe toda la altura de su contenedor */
     color: var(--light-text-color);
+}
+
+.card-inner {
+    height: 100%;
+    width: 100%;
+    transition: transform 0.3s ease-in-out;
+    background-color: inherit; /* Hereda el color de fondo de la tarjeta */
 }
 
 body.dark-mode .project-card {
@@ -17,11 +24,14 @@ body.dark-mode .project-card {
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
     box-shadow: 0 8px 16px var(--light-shadow-color);
 }
 
-body.dark-mode .project-card:hover {
+.project-card:hover .card-inner {
+    transform: translateY(-5px);
+}
+
+body.dark-mode .project-card:hover  {
     box-shadow: 0 8px 16px var(--dark-shadow-color);
 }
 
@@ -72,16 +82,48 @@ body.dark-mode .project-card:hover {
 .card-body {
     background-color: var(--light-card-body-background);
     color: var(--light-text-color);
-    position: absolute;
-    bottom: 0;  
-    width: 100%;
     padding: var(--project-card-padding);
     z-index: 2;
+    position: relative; /* Necesario para el z-index y el margen negativo */
+    margin-top: -50px; /* Sube el card-body para que se superponga a la imagen */
+    border-bottom-left-radius: var(--project-card-border-radius);
+    border-bottom-right-radius: var(--project-card-border-radius);
     
+    display: flex; /* Habilita Flexbox */
+    flex-direction: column; /* Apila los elementos verticalmente */
     /* Light mode background: semi-transparent white. Overridden in app.css for dark mode. */
 }
 
 body.dark-mode .card-body {
     background-color: var(--dark-card-background);
     color: var(--dark-text-color);
+}
+
+.card-text-content {
+    flex-grow: 1; /* Permite que este div crezca para llenar el espacio */
+    overflow-y: auto; /* Muestra una barra de scroll vertical si el contenido se desborda */
+    margin-bottom: 1rem; /* Añade un espacio entre el texto y los botones */
+}
+
+.project-technologies {
+    position: absolute; /* Posicionado relativo al .project-card */
+    bottom: var(--project-card-padding);
+    right: var(--project-card-padding);
+    display: flex;
+    gap: 0.5rem; /* Espacio entre iconos */
+}
+
+.project-technologies i {
+    font-size: 1.5rem; /* Tamaño de los iconos más pequeño */
+    opacity: 0.7;
+    transition: opacity 0.2s ease-in-out;
+    color: var(--light-text-color); /* Color por defecto (negro) */
+}
+
+body.dark-mode .project-technologies i {
+    color: var(--dark-text-color); /* Color para modo oscuro (blanco) */
+}
+
+.project-card:hover .project-technologies i {
+    opacity: 1;
 }

@@ -10,10 +10,21 @@
 
 // Al cargar, aplicar el tema guardado
 window.applySavedTheme = function () {
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme === "dark") {
-        document.body.classList.add("dark-mode");
-        return true;
+    let theme = localStorage.getItem("theme");
+    let isDark;
+
+    if (theme) {
+        isDark = theme === "dark";
+    } else {
+        // Si no hay tema guardado, usar la preferencia del sistema
+        isDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     }
-    return false;
+
+    if (isDark) {
+        document.body.classList.add("dark-mode");
+    } else {
+        document.body.classList.remove("dark-mode");
+    }
+
+    return isDark;
 };
