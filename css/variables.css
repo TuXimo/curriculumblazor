@@ -28,8 +28,8 @@
     --dark-h5-color: #eee;
     --dark-p-li-color: #ccc;
     --dark-skill-description-color: #bbb;
-    --dark-nav-icon-color: #ddd;
-    --dark-nav-link-hover-color: #00ff99;
+    --dark-nav-icon-color: #ddd; 
+    --dark-nav-link-hover-color: var(--bootstrap-blue); /* Cambiado de verde a azul bootstrap */
     --dark-skills-animation-area-background: #2a2a2a;
     --dark-nav-tabs-active-background: #2a2a2a;
     --dark-nav-tabs-active-border-color: #666;
@@ -43,6 +43,7 @@
 
     /* Colores de Bootstrap y otros */
     --bootstrap-blue: #0d6efd;
+    --bootstrap-blue-neon-shadow: 0 0 5px #0d6efd, 0 0 10px #0d6efd; /* Sombra para efecto neón */
     --bootstrap-primary-button-background: #1b6ec2;
     --bootstrap-primary-button-border: #1861ac;
     --bootstrap-primary-button-dark-background: #0d6efd;

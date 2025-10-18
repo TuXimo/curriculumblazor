@@ -4,6 +4,14 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+/*
+ * Corrige el anclaje de los enlaces internos para que no queden ocultos por el navbar fijo.
+ * Aplica un margen superior de scroll igual a la altura del navbar a todas las secciones con un ID.
+*/
+section[id] {
+    scroll-margin-top: var(--navbar-height);
+}
+
 /* Modo claro (por defecto) */
 body {
     background-color: var(--light-background);

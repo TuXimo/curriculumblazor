@@ -3,11 +3,9 @@
 #about-me {
     position: relative;
     overflow: hidden;
-    min-height: 100vh;
+    height: calc(100vh - var(--navbar-height)); /* Altura de la ventana menos la barra de navegación */
     display: flex;
     align-items: center;
-    margin-top: calc(-1 * var(--navbar-height)); /* Compensa el padding del body */
-    padding-top: var(--navbar-height); /* Evita que el contenido quede debajo del navbar */
     width: 100vw;
     left: 50%;
     transform: translateX(-50%);
@@ -61,6 +59,22 @@ body.dark-mode #code-text-container {
     position: relative;
     z-index: 2; /* Encima de los efectos de fondo */
 }
+
+/* --- Botones de la sección About Me --- */
+.about-me-btn {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.about-me-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+body.dark-mode .about-me-btn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
 
 /* Contenedor de la imagen de perfil para el efecto 3D */
 .profile-image-container {

@@ -27,7 +27,8 @@ body.dark-mode .nav-link {
 }
 
 body.dark-mode .nav-link:hover {
-    color: var(--dark-nav-link-hover-color); /* verde neón tipo highlight */
+    color: var(--dark-nav-link-hover-color);
+    text-shadow: var(--bootstrap-blue-neon-shadow);
 }
 
 /* --- ICONOS (globo y sol/luna) --- */
@@ -41,7 +42,8 @@ body.dark-mode .nav-icon {
 }
 
 body.dark-mode .nav-icon:hover {
-    color: var(--dark-nav-link-hover-color) !important;
+    color: var(--dark-nav-link-hover-color) !important; /* El color ya tiene !important desde app.css */
+    text-shadow: var(--bootstrap-blue-neon-shadow);
 }
 
 /* --- BOTÓN HAMBURGUESA --- */
