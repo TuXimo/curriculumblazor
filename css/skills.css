@@ -1,5 +1,6 @@
 ﻿/* Contenedor principal para la división 50/50 */
 .skills-main-container {
+    position: relative;
     display: flex;
     width: 100%;
     height: var(--skills-main-container-height);
@@ -156,4 +157,75 @@ body.dark-mode .level-block {
 
 .level-block.empty {
     background-color: transparent;
+}
+
+/* === Marcadores laterales === */
+.skills-bookmarks {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.8rem;
+    flex: 0 0 60px;
+    max-height: var(--skills-main-container-height);
+    overflow-y: auto;
+    background-color: transparent;
+    border-right: 1px solid var(--light-border-color);
+    padding: 12px 0; /* 🟢 margen interno arriba y abajo */
+
+    /* 🕶️ Scroll invisible pero funcional */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+body.dark-mode .skills-bookmarks {
+    border-right: 1px solid var(--dark-border-color);
+}
+
+/* 🕶️ Scroll invisible en WebKit */
+.skills-bookmarks::-webkit-scrollbar {
+    display: none;
+}
+
+
+.skills-bookmarks::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.skills-bookmarks::-webkit-scrollbar-thumb {
+    background-color: var(--light-border-color);
+    border-radius: 3px;
+}
+
+body.dark-mode .skills-bookmarks::-webkit-scrollbar-thumb {
+    background-color: var(--dark-border-color);
+}
+
+.skill-bookmark {
+    width: 36px;
+    height: 36px;
+    cursor: pointer;
+    transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+}
+
+.skill-bookmark img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+/* Skill seleccionada */
+.skill-bookmark.active {
+    transform: translateY(-6px) scale(1.15);
+    opacity: 1;
+    filter: drop-shadow(0 0 4px var(--light-accent));
+}
+
+body.dark-mode .skill-bookmark.active {
+    filter: drop-shadow(0 0 6px var(--dark-accent));
 }
