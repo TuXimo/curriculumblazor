@@ -229,3 +229,61 @@ body.dark-mode .skills-bookmarks::-webkit-scrollbar-thumb {
 body.dark-mode .skill-bookmark.active {
     filter: drop-shadow(0 0 6px var(--dark-accent));
 }
+
+/* === Skill Section: mobile simplificado === */
+@media (max-width: 768px) {
+
+    /* Contenedor principal pasa a columna */
+    .skills-main-container {
+        flex-direction: column;
+        height: auto; /* deja crecer según contenido */
+        padding: 1rem;
+        box-shadow: none; /* opcional: menos sombra en mobile */
+    }
+
+    /* Oculta la animación de íconos */
+    .skills-icons-animation-area,
+    .skill-icon-container {
+        display: none !important;
+    }
+
+    /* Skills-bookmarks horizontal para mobile (opcional) */
+    .skills-bookmarks {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        flex: none;
+        overflow-x: auto;
+        overflow-y: hidden;
+        gap: 0.5rem;
+        border-right: none;
+        margin-bottom: 1rem;
+    }
+
+    .skills-bookmarks::-webkit-scrollbar {
+        display: none; /* scroll invisible */
+    }
+
+    /* Skills-details ocupa todo el ancho */
+    .skills-details {
+        width: 100%;
+        flex: none;
+        padding: 0.5rem 0.5rem;
+    }
+
+    /* Ajuste de textos más compactos */
+    .skill-title {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+
+    .skill-description, .skill-level-text {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Contenedor de nivel */
+    .skill-level {
+        justify-content: center;
+    }
+}

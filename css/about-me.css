@@ -94,3 +94,39 @@ body.dark-mode .about-me-btn:hover {
 body.dark-mode .profile-image {
     box-shadow: var(--dark-profile-image-shadow);
 }
+
+/* === Ajustes responsive para HOME (solo mobile) === */
+@media (max-width: 768px) {
+
+    /* 1️⃣ Ajusta el alto para que no se superponga con el navbar */
+    #home {
+        height: auto; /* deja que crezca según contenido */
+        padding-top: 90px; /* da espacio bajo el navbar fijo */
+    }
+
+    /* 2️⃣ Centra los botones y los deja alineados */
+    #home .d-flex {
+        justify-content: center;
+    }
+
+    #home .about-me-btn {
+        flex: 1 1 auto;
+        min-width: 140px;
+        text-align: center;
+    }
+
+    /* 3️⃣ Oculta la foto de perfil */
+    .profile-image-container {
+        display: none;
+    }
+
+    /* 4️⃣ Corrige el ícono hamburguesa en modo claro */
+    .navbar-light .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 0, 0, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+
+    /* 5️⃣ Y en modo oscuro, que siga siendo blanca */
+    body.dark-mode .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.9)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    }
+}

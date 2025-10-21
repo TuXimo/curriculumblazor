@@ -66,3 +66,22 @@ body.dark-mode .navbar-toggler {
 body.dark-mode .brand-name {
     color: var(--dark-text-color) !important;
 }
+
+/* === Ajustes responsive solo para MOBILE === */
+@media (max-width: 768px) {
+
+    /* 1️⃣ Evita que el navbar tape la intro */
+    body {
+        padding-top: 90px; /* ajustá si sigue tapando un poco */
+    }
+
+    /* 2️⃣ Corrige visibilidad del icono hamburguesa */
+    .navbar-toggler-icon {
+        filter: invert(0); /* negra en modo claro */
+    }
+
+    body.dark-mode .navbar-toggler-icon {
+        filter: invert(1); /* blanca en modo oscuro */
+    }
+}
+
