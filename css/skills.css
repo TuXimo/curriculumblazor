@@ -1,38 +1,32 @@
 ﻿/* Contenedor principal para la división 50/50 */
 .skills-main-container {
-    position: relative;
     display: flex;
     width: 100%;
-    height: var(--skills-main-container-height);
-    box-shadow: 0 4px 8px var(--light-shadow-color);
-    background-color: var(--light-background);
-    color: var(--light-text-color);
-}
+    height: 400px;
+    /*border: 2px solid var(--border-color);*/
 
-body.dark-mode .skills-main-container {
-    box-shadow: 0 4px 8px var(--dark-box-shadow);
-    background-color: var(--dark-card-background);
-    color: var(--dark-text-color);
-    border: 2px solid var(--dark-border-color);
+    /*border-radius: 10px;*/
+    box-shadow: 0 4px 8px var(--shadow-color);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    /*border: 2px solid #444;*/ /* opcional: borde más visible */
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.05); /* shadow más sutil en dark */
 }
 
 /* Lado izquierdo: Área de animación */
 .skills-icons-animation-area {
-    flex: 0 0 var(--skills-icons-animation-area-flex-basis);
+    flex: 0 0 50%;
     position: relative;
     overflow: hidden;
-    background-color: var(--light-skills-icons-animation-area-background);
-}
-
-body.dark-mode .skills-icons-animation-area {
-    background-color: var(--dark-skills-animation-area-background);
+    /*background-color: var(--bg-secondary);*/
+    background-color: #e8e8e8
 }
 
 /* Contenedor de icono individual */
 .skill-icon-container {
     position: absolute;
-    width: var(--skill-icon-size);
-    height: var(--skill-icon-size);
+    width: 80px;
+    height: 80px;
     cursor: pointer;
     display: flex;
     justify-content: center;
@@ -43,36 +37,27 @@ body.dark-mode .skills-icons-animation-area {
     width: 100%;
     height: 100%;
     object-fit: contain;
-    border-radius: var(--skill-icon-border-radius);
+    border-radius: 12px;
     transition: transform 0.2s, box-shadow 0.2s;
 }
 
 .skill-icon-container img:hover {
-    transform: var(--skill-icon-hover-transform);
-    box-shadow: var(--light-skill-icon-hover-shadow);
+    transform: scale(1.3);
+    box-shadow: 0 0 20px var(--shadow-hover);
     z-index: 10;
-}
-
-body.dark-mode .skill-icon-container img:hover {
-    box-shadow: var(--dark-skill-icon-hover-shadow);
 }
 
 /* Lado derecho: Sección de detalles */
 .skills-details {
     flex: 1;
-    background-color: var(--light-skills-details-background);
-    color: var(--light-text-color);
-    padding: var(--skills-details-padding);
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    padding: 1.5rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     position: relative;
     overflow: hidden;
-}
-
-body.dark-mode .skills-details {
-    background-color: var(--dark-card-background);
-    color: var(--dark-text-color);
 }
 
 /* Animación de fade-in */
@@ -94,196 +79,51 @@ body.dark-mode .skills-details {
 
 /* Estilos de texto */
 .skill-title {
-    font-size: var(--skill-title-font-size);
-    font-weight: var(--skill-title-font-weight);
-    color: var(--light-text-color);
-    margin-bottom: var(--skill-title-margin-bottom);
-}
-
-body.dark-mode .skill-title {
-    color: var(--dark-h5-color);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
 }
 
 .skill-description {
-    font-size: var(--skill-description-font-size);
-    color: var(--light-text-secondary);
-    line-height: var(--skill-description-line-height);
-}
-
-body.dark-mode .skill-description {
-    color: var(--dark-skill-description-color);
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.6;
 }
 
 .skill-level-text {
-    font-size: var(--skill-level-text-font-size);
-    font-weight: var(--skill-level-text-font-weight);
-    color: var(--light-text-secondary);
-    margin-bottom: var(--skill-level-text-margin-bottom);
-}
-
-body.dark-mode .skill-level-text {
-    color: var(--dark-p-li-color);
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
 }
 
 /* Contenedor de los cuadros de nivel */
 .skill-level {
     display: flex;
-    gap: var(--skill-level-gap);
-    margin: var(--skill-level-margin);
+    gap: 6px;
+    margin: 10px 0;
 }
 
 /* Cuadro de nivel rectangular y discreto */
 .level-block {
-    width: var(--level-block-width);
-    height: var(--level-block-height);
-    border: 1px solid var(--light-border-color);
-    border-radius: var(--level-block-border-radius);
+    width: 40px;
+    height: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
     background-color: transparent;
     transition: background-color 0.3s, transform 0.2s;
 }
 
-body.dark-mode .level-block {
-    border: 1px solid var(--dark-border-color);
-}
-
 .level-block.filled {
-    background-color: var(--level-block-filled-background);
-    box-shadow: var(--level-block-filled-shadow);
+    background-color: #00ff66;
+    box-shadow: 0 0 5px #00ff66;
 }
 
 .level-block.filled:hover {
-    transform: var(--level-block-filled-hover-transform);
+    transform: scale(1.1);
 }
 
 .level-block.empty {
     background-color: transparent;
-}
-
-/* === Marcadores laterales === */
-.skills-bookmarks {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    gap: 0.8rem;
-    flex: 0 0 60px;
-    max-height: var(--skills-main-container-height);
-    overflow-y: auto;
-    background-color: transparent;
-    border-right: 1px solid var(--light-border-color);
-    padding: 12px 0; /* 🟢 margen interno arriba y abajo */
-
-    /* 🕶️ Scroll invisible pero funcional */
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-}
-
-body.dark-mode .skills-bookmarks {
-    border-right: 1px solid var(--dark-border-color);
-}
-
-/* 🕶️ Scroll invisible en WebKit */
-.skills-bookmarks::-webkit-scrollbar {
-    display: none;
-}
-
-
-.skills-bookmarks::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.skills-bookmarks::-webkit-scrollbar-thumb {
-    background-color: var(--light-border-color);
-    border-radius: 3px;
-}
-
-body.dark-mode .skills-bookmarks::-webkit-scrollbar-thumb {
-    background-color: var(--dark-border-color);
-}
-
-.skill-bookmark {
-    width: 36px;
-    height: 36px;
-    cursor: pointer;
-    transition: transform 0.25s ease, filter 0.25s ease, opacity 0.25s;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    opacity: 0.8;
-}
-
-.skill-bookmark img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    border-radius: 6px;
-}
-
-/* Skill seleccionada */
-.skill-bookmark.active {
-    transform: translateY(-6px) scale(1.15);
-    opacity: 1;
-    filter: drop-shadow(0 0 4px var(--light-accent));
-}
-
-body.dark-mode .skill-bookmark.active {
-    filter: drop-shadow(0 0 6px var(--dark-accent));
-}
-
-/* === Skill Section: mobile simplificado === */
-@media (max-width: 768px) {
-
-    /* Contenedor principal pasa a columna */
-    .skills-main-container {
-        flex-direction: column;
-        height: auto; /* deja crecer según contenido */
-        padding: 1rem;
-        box-shadow: none; /* opcional: menos sombra en mobile */
-    }
-
-    /* Oculta la animación de íconos */
-    .skills-icons-animation-area,
-    .skill-icon-container {
-        display: none !important;
-    }
-
-    /* Skills-bookmarks horizontal para mobile (opcional) */
-    .skills-bookmarks {
-        flex-direction: row;
-        justify-content: center;
-        width: 100%;
-        flex: none;
-        overflow-x: auto;
-        overflow-y: hidden;
-        gap: 0.5rem;
-        border-right: none;
-        margin-bottom: 1rem;
-    }
-
-    .skills-bookmarks::-webkit-scrollbar {
-        display: none; /* scroll invisible */
-    }
-
-    /* Skills-details ocupa todo el ancho */
-    .skills-details {
-        width: 100%;
-        flex: none;
-        padding: 0.5rem 0.5rem;
-    }
-
-    /* Ajuste de textos más compactos */
-    .skill-title {
-        font-size: 1.2rem;
-        text-align: center;
-    }
-
-    .skill-description, .skill-level-text {
-        font-size: 0.9rem;
-        text-align: center;
-    }
-
-    /* Contenedor de nivel */
-    .skill-level {
-        justify-content: center;
-    }
 }

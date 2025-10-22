@@ -1,87 +1,66 @@
 /* --- NAVBAR --- */
 .navbar {
-    background-color: var(--navbar-light-background-blurred);
+    background-color: rgba(255, 255, 255, 0.9);
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease, color 0.3s ease;
-    border-bottom: var(--navbar-light-border-bottom);
 }
 
 .navbar .nav-link {
-    color: var(--light-brand-name-color);
+    color: #333;
     transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    color: var(--bootstrap-blue);
+    color: #0d6efd;
 }
 
 /* --- DARK MODE --- */
 body.dark-mode .navbar {
-    background-color: var(--navbar-dark-background-blurred);
+    background-color: rgba(18, 18, 18, 0.9);
     backdrop-filter: blur(10px);
-    border-bottom: var(--navbar-dark-border-bottom);
+    border-bottom: 1px solid #333;
 }
 
 body.dark-mode .nav-link {
-    color: var(--dark-text-color);
+    color: #f1f1f1;
 }
 
 body.dark-mode .nav-link:hover {
-    color: var(--dark-nav-link-hover-color);
+    color: #00ff99; /* verde neón tipo highlight */
 }
 
 /* --- ICONOS (globo y sol/luna) --- */
 .nav-icon {
-    color: var(--light-brand-name-color);
+    color: #333;
     transition: color 0.3s ease;
 }
 
 body.dark-mode .nav-icon {
-    color: var(--dark-nav-icon-color) !important;
+    color: #ddd !important;
 }
 
 body.dark-mode .nav-icon:hover {
-    color: var(--dark-nav-link-hover-color) !important; /* El color ya tiene !important desde app.css */
-    text-shadow: var(--bootstrap-blue-neon-shadow);
+    color: #00ff99 !important;
 }
 
 /* --- BOTÓN HAMBURGUESA --- */
 .navbar-toggler {
     border: none;
-    filter: var(--navbar-toggler-light-filter);
+    filter: invert(0);
     transition: filter 0.3s ease;
 }
 
 body.dark-mode .navbar-toggler {
-    filter: var(--navbar-toggler-dark-filter); /* invierte el ícono del menú para que se vea en fondo oscuro */
+    filter: invert(1); /* invierte el ícono del menú para que se vea en fondo oscuro */
 }
 
 /* --- MARCA (Título) --- */
 .brand-name {
-    color: var(--light-brand-name-color) !important;
-    font-weight: var(--font-weight-bold);
+    color: #333 !important;
+    font-weight: 700;
     transition: color 0.3s ease;
 }
 
 body.dark-mode .brand-name {
-    color: var(--dark-text-color) !important;
+    color: #f1f1f1 !important;
 }
-
-/* === Ajustes responsive solo para MOBILE === */
-@media (max-width: 768px) {
-
-    /* 1️⃣ Evita que el navbar tape la intro */
-    body {
-        padding-top: 90px; /* ajustá si sigue tapando un poco */
-    }
-
-    /* 2️⃣ Corrige visibilidad del icono hamburguesa */
-    .navbar-toggler-icon {
-        filter: invert(0); /* negra en modo claro */
-    }
-
-    body.dark-mode .navbar-toggler-icon {
-        filter: invert(1); /* blanca en modo oscuro */
-    }
-}
-
