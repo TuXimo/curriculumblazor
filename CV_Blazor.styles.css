@@ -1,1 +1,60 @@
-/* /Components/ProjectCard.razor.rz.scp.css */
+/* /Layout/MainLayout.razor.rz.scp.css */
+/* /Layout/NavMenu.razor.rz.scp.css */
+/* Estilo base de la barra de navegación (siempre fija) */
+.navbar[b-tzdlp9298a] {
+    /* Por defecto, el fondo es transparente */
+    background-color: transparent;
+    /* Transición suave para cuando el fondo aparezca */
+    transition: background-color 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+/* Estilos que se aplican SOLO cuando la página se ha desplazado */
+.navbar.navbar-scrolled[b-tzdlp9298a] {
+    /* Efecto de vidrio esmerilado */
+    background-color: rgba(25, 25, 25, 0.7);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+}
+
+/* --- Colores de Enlaces e Iconos (Esto ya estaba correcto) --- */
+
+/* Color por defecto para enlaces e iconos (modo claro, sin scroll) */
+.nav-link[b-tzdlp9298a],
+.nav-icon[b-tzdlp9298a] {
+    font-weight: 500;
+    margin: 0 15px;
+    transition: color 0.3s ease;
+    color: #333 !important; 
+}
+
+/* Anulación para el modo oscuro cuando NO está desplazado */
+:global(body.dark-mode) .navbar:not(.navbar-scrolled) .nav-link[b-tzdlp9298a],
+:global(body.dark-mode) .navbar:not(.navbar-scrolled) .nav-icon[b-tzdlp9298a] {
+    color: #f1f1f1 !important; /* Color claro para el modo oscuro */
+}
+
+/* Color para enlaces e iconos cuando SÍ está desplazado (siempre claro) */
+.navbar.navbar-scrolled .nav-link[b-tzdlp9298a],
+.navbar.navbar-scrolled .nav-icon[b-tzdlp9298a] {
+    color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* El color del hover es siempre el mismo (verde brillante) */
+.nav-link:hover[b-tzdlp9298a],
+.nav-icon:hover[b-tzdlp9298a] {
+    color: #00ff99 !important;
+}
+
+/* --- Icono del Menú Hamburguesa (Esto ya estaba correcto) --- */
+
+/* Icono por defecto (modo claro, sin scroll) */
+.navbar-toggler-icon[b-tzdlp9298a] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(51, 51, 51, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+/* Icono para modo oscuro (sin scroll) y para cuando está con scroll (siempre claro) */
+:global(body.dark-mode) .navbar:not(.navbar-scrolled) .navbar-toggler-icon[b-tzdlp9298a],
+.navbar.navbar-scrolled .navbar-toggler-icon[b-tzdlp9298a] {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 0.8)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}

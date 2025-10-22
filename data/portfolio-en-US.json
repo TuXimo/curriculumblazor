@@ -61,13 +61,7 @@
         "/img/projects/tw/t4.png"
       ],
       "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
-      "githubLink": "",
-      "technologies": [
-        "android-plain",
-        "csharp-plain",
-        "blender-original",
-        "unity-plain"
-      ]
+      "githubLink": ""
     },
     {
       "title": "Interactive Personal Website",
@@ -75,13 +69,7 @@
       "mainImage": "/img/projects/3d/m1.png",
       "secondaryImages": [],
       "projectLink": "https://3d.maximobrunetti.com.ar",
-      "githubLink": "",
-      "technologies": [
-        "threejs-original",
-        "typescript-plain",
-        "blender-original",
-        "unity-plain"
-      ]
+      "githubLink": ""
     }
   ],
   "jams": [
@@ -95,8 +83,7 @@
         "/img/jams/lr/s3.png"
       ],
       "projectLink": "https://tinincho.itch.io/la-ultima-risa",
-      "githubLink": "",
-      "technologies": [ "csharp-plain", "unity-plain" ]
+      "githubLink": ""
     },
     {
       "title": "Earthquake Simulator (University Project)",
@@ -106,12 +93,7 @@
         "/img/jams/earths/s1.png"
       ],
       "projectLink": "https://tuximo.itch.io/school-earthquake-quiz",
-      "githubLink": "",
-      "technologies": [
-        "csharp-plain",
-        "blender-original",
-        "unity-plain"
-      ]
+      "githubLink": ""
     },
     {
       "title": "Bitter Surprises",
@@ -121,8 +103,7 @@
         "/img/jams/sa/sec.png"
       ],
       "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
-      "githubLink": "",
-      "technologies": [ "csharp-plain", "unity-plain" ]
+      "githubLink": ""
     }
   ]
 }
