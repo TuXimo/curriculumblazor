@@ -16,7 +16,7 @@
     --light-skill-icon-hover-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
     --light-skills-animation-area-background: #f0f2f5; /* Gris claro para el fondo del área de iconos */
     --navbar-light-background-blurred: rgba(255, 255, 255, 0.9);
-    --navbar-toggler-light-filter: invert(0);
+    /* --navbar-toggler-light-filter: invert(0); */ /* Eliminado */
     --navbar-light-border-bottom: 1px solid #e7e7e7;
 
     /* Colores base para Dark Mode */
@@ -39,7 +39,7 @@
     --dark-skill-icon-hover-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
     --navbar-dark-background-blurred: rgba(18, 18, 18, 0.9);
     --navbar-dark-border-bottom: 1px solid #333;
-    --navbar-toggler-dark-filter: invert(1);
+    /* --navbar-toggler-dark-filter: invert(1); */ /* Eliminado */
 
     /* Colores de Bootstrap y otros */
     --bootstrap-blue: #0d6efd;
@@ -87,8 +87,8 @@
     --navbar-scrolled-link-icon-color: rgba(255, 255, 255, 0.8);
     --navbar-link-icon-font-weight: 500;
     --navbar-link-icon-margin: 0 15px;
-    --navbar-toggler-icon-light-stroke: rgba(51, 51, 51, 0.8);
-    --navbar-toggler-icon-dark-stroke: rgba(255, 255, 255, 0.8);
+    /* --navbar-toggler-icon-light-stroke: rgba(51, 51, 51, 0.8); */ /* Eliminado */
+    /* --navbar-toggler-icon-dark-stroke: rgba(255, 255, 255, 0.8); */ /* Eliminado */
 
     /* Variables específicas de Skills Section */
     --skills-main-container-height: 400px;
@@ -106,7 +106,6 @@
     --skill-level-text-font-weight: 500;
     --skill-level-text-margin-bottom: 1rem;
     --skill-level-gap: 6px;
-    --skill-level-margin: 10px 0;
     --level-block-width: 40px;
     --level-block-height: 15px;
     --level-block-border-radius: 4px;

@@ -9,12 +9,33 @@ function handleScroll() {
     }
 }
 
-// Exporta una función simple que solo añade el listener.
-export function initializeNavbarScroll() {
-    window.addEventListener('scroll', handleScroll);
+function handleMenuAutoClose(event) {
+    const navMenu = document.getElementById('navbarNav');
+    if (!navMenu || !navMenu.classList.contains('show')) {
+        return;
+    }
+
+    const isNavLinkClick = event.target.closest('.nav-link');
+    const isClickInsideNavbar = event.target.closest('.navbar');
+
+    if (isNavLinkClick || !isClickInsideNavbar) {
+        const navbarToggler = document.querySelector('.navbar-toggler');
+        if (navbarToggler) {
+            navbarToggler.click();
+        }
+    }
 }
 
-// Exporta una función separada para limpiar el listener.
-export function disposeNavbarScroll() {
-    window.removeEventListener('scroll', handleScroll);
+export function initialize() {
+    window.addEventListener('scroll', handleScroll);
+    document.addEventListener('click', handleMenuAutoClose);
+    handleScroll(); // Run on startup
+
+    // Return an object with a dispose method
+    return {
+        dispose: () => {
+            window.removeEventListener('scroll', handleScroll);
+            document.removeEventListener('click', handleMenuAutoClose);
+        }
+    };
 }

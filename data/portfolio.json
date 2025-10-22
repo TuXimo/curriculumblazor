@@ -1,108 +1,115 @@
 {
   "resume": {
-    "summary": [
-      "Soy desarrollador de software con experiencia en C# y Unity.",
-      "Me apasiona crear mecánicas innovadoras.",
-      "Estoy buscando aportar en proyectos desafiantes."
+    "summaryKeys": [
+      "ps_summary_1",
+      "ps_summary_2",
+      "ps_summary_3"
     ],
     "professionalExperience": [
       {
-        "title": "Pasante en Programación de Animación",
+        "slug": "xowen",
         "company": "Xowen Studios",
-        "period": "Julio 2025 - Septiembre 2025",
-        "achievements": [
-          "Realicé el proceso de limpieza y optimización de animaciones (cleanup) en Unreal Engine para mejorar la fidelidad de los movimientos y la eficiencia del proyecto.",
-          "Colaboré en la integración de animaciones en el motor del juego."
+        "period": "July 2025 - September 2025",
+        "achievementKeys": [
+          "ps_exp_xowen_ach_1",
+          "ps_exp_xowen_ach_2"
         ]
       },
       {
-        "title": "Programador de Unity",
-        "company": "Abi Rached Studio (Estudio Independiente)",
-        "period": "Abril 2024 - Agosto 2025",
-        "achievements": [
-          "Desarrollo y programación de las mecánicas de jugabilidad y sistemas de combate para un videojuego de rol de acción estilo Hack and Slash.",
-          "Responsable de la implementación de sistemas de animación y lógica de enemigos en Unity."
+        "slug": "abi_rached",
+        "company": "Abi Rached Studio (Independent Studio)",
+        "period": "April 2024 - August 2025",
+        "achievementKeys": [
+          "ps_exp_abi_rached_ach_1",
+          "ps_exp_abi_rached_ach_2"
         ]
       }
     ],
     "education": [
       {
-        "title": "Tecnicatura en Desarrollo de Videojuegos",
-        "institution": "Universidad de Mendoza",
-        "period": "2020 - 2023"
-      }
-    ],
-    "skills": [
-      {
-        "name": "Programming Languages",
-        "details": [
-          "C# (Advanced)",
-          "C++ (Basic)"
-        ]
-      },
-      {
-        "name": "Game Engines",
-        "details": [
-          "Unity",
-          "Unreal Engine"
-        ]
+        "slug": "unimendoza",
+        "institution": "University of Mendoza",
+        "period": "2020 - 2023",
+        "descriptionKey": "ps_edu_unimendoza_desc",
+        "image": "/img/degree.jpeg"
       }
     ]
   },
-  "projects": [
+  "projects": [    
     {
-      "title": "Tightrope Walker: Gyroscope",
-      "shortDescription": "Juego para móviles desarrollado en Unity, donde el control del personaje se basa en el giroscopio del dispositivo, simulando el equilibrio de un funambulista.",
-      "mainImage": "/img/projects/tw/main.png",
+      "slug": "tightrope_walker",
+      "mainImage": "/img/projects/tw/main.webp",
       "secondaryImages": [
-        "/img/projects/tw/t1.png",
-        "/img/projects/tw/t2.png",
-        "/img/projects/tw/t3.png",
-        "/img/projects/tw/t4.png"
+        "/img/projects/tw/t1.webp",
+        "/img/projects/tw/t2.webp",
+        "/img/projects/tw/t3.webp",
+        "/img/projects/tw/t4.webp"
       ],
       "projectLink": "https://play.google.com/store/apps/details?id=com.tuximo.tightropewalker",
-      "githubLink": ""
+      "technologies": [
+        "android-plain",
+        "csharp-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     },
     {
-      "title": "Página Web Interactiva",
-      "shortDescription": "Un currículum interactivo alojado en www.3d.maximobrunetti.com.ar, desarrollado con Needle Engine y Three.js para crear una experiencia inmersiva.",
-      "mainImage": "/img/projects/3d/m1.png",
+      "slug": "portfolio_website",
+      "mainImage": "/img/projects/portfolio/main.webp",
+      "secondaryImages": [],
+      "projectLink": "https://maximobrunetti.com.ar",
+      "technologies": [
+        "csharp-plain",
+        "blazor-plain",
+        "dotnet-plain",
+        "javascript-plain",
+        "json-plain"
+      ]
+    },
+    {
+      "slug": "interactive_website",
+      "mainImage": "/img/projects/3d/m1.webp",
       "secondaryImages": [],
       "projectLink": "https://3d.maximobrunetti.com.ar",
-      "githubLink": ""
+      "technologies": [
+        "threejs-original",
+        "typescript-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     }
   ],
   "jams": [
     {
-      "title": "La Última Risa",
-      "shortDescription": "Juego desarrollado para la Global Game Jam 2024.",
-      "mainImage": "/img/jams/lr/m1.png",
+      "slug": "the_last_laugh",
+      "mainImage": "/img/jams/lr/m1.webp",
       "secondaryImages": [
-        "/img/jams/lr/s1.png",
-        "/img/jams/lr/s2.png",
-        "/img/jams/lr/s3.png"
-
+        "/img/jams/lr/s1.webp",
+        "/img/jams/lr/s2.webp",
+        "/img/jams/lr/s3.webp"
       ],
       "projectLink": "https://tinincho.itch.io/la-ultima-risa",
-      "githubLink": ""
+      "technologies": [ "csharp-plain", "unity-plain" ]
     },
     {
-      "title": "Simulador de Terremotos (Proyecto Universitario)",
-      "shortDescription": "Simulador académico desarrollado para la universidad, enfocado en simular un terremoto y localizado en varios idiomas para una audiencia global.",
-      "mainImage": "/img/jams/earths/m1.png",
+      "slug": "earthquake_simulator",
+      "mainImage": "/img/jams/earths/m1.webp",
       "secondaryImages": [
-        "/img/jams/earths/s1.png"
+        "/img/jams/earths/s1.webp"
       ],
       "projectLink": "https://tuximo.itch.io/school-earthquake-quiz",
-      "githubLink": ""
+      "technologies": [
+        "csharp-plain",
+        "blender-original",
+        "unity-plain"
+      ]
     },
     {
-      "title": "Sorpresas Amargas",
-      "shortDescription": "Juego de horror psicológico en 2D desarrollado en 3 días para una Game Jam.",
-      "mainImage": "/img/jams/sa/main.png",
-      "secondaryImages": [ "/img/jams/sa/sec.png" ],
+      "slug": "bitter_surprises",
+      "mainImage": "/img/jams/sa/main.webp",
+      "secondaryImages": [ "/img/jams/sa/sec.webp" ],
       "projectLink": "https://amrasmithandir.itch.io/sorpresas-amargas",
-      "githubLink": ""
+      "technologies": [ "csharp-plain", "unity-plain" ]
     }
   ]
 }

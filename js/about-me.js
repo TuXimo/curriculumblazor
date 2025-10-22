@@ -47,40 +47,39 @@ export async function createCodeParticles() {
         : "--bootstrap-primary-button-background";
     const particleColor = getComputedStyle(document.documentElement).getPropertyValue(colorVar).trim();
 
-    // Reducir cantidad de partículas en pantallas pequeñas
-    const isMobile = window.innerWidth < 768;
-    const particleCount = isMobile ? 40 : 80;
+    // --- Ajustes según dispositivo ---
+    const width = window.innerWidth;
+    const isMobile = width < 768;
+    const particleCount = isMobile ? 25 : 80; // 🔸 Menos partículas
+    const letterCount = isMobile ? 10 : 40;   // 🔸 Menos letras flotantes
+    const particleSpeed = isMobile ? 1.0 : 1.8; // 🔸 Movimiento más suave
+    const disableHover = isMobile; // 🔸 Evita repulse en móviles
 
     // --- tsParticles ---
     activeAnimations.tsParticlesInstance = await tsParticles.load("particles-container", {
+        fpsLimit: isMobile ? 45 : 60, // 🔸 Limita FPS en móviles
         particles: {
             number: { value: particleCount },
             color: { value: particleColor },
             shape: { type: "circle" },
             opacity: { value: 0.4, random: true },
-            size: { value: 3, random: true },
-            move: { enable: true, speed: 1.8, outModes: { default: "out" } },
-            links: { enable: true, distance: 120, color: particleColor, opacity: 0.2, width: 1 }
+            size: { value: { min: 2, max: 3 } },
+            move: { enable: true, speed: particleSpeed, outModes: { default: "out" } },
+            links: { enable: !isMobile, distance: 120, color: particleColor, opacity: 0.2, width: 1 }
         },
         interactivity: {
             events: {
-                onhover: { enable: true, mode: "repulse" },
-                onclick: { enable: true, mode: "push" },
+                onhover: { enable: !disableHover, mode: "repulse" },
+                onclick: { enable: !isMobile, mode: "push" }
             },
-            modes: {
-                repulse: { distance: 100, speed: 0.6 }
-            }
+            modes: { repulse: { distance: 100, speed: 0.6 } }
         },
-        detectRetina: true
+        detectRetina: !isMobile // 🔸 Evita escalado extra en móviles
     });
 
     // --- Letras flotantes ---
-    const allRandomWords = ["xd", "jamon", "wach0s", "abc", "max", "zzz"];
-    const maxLength = 5;
-    const randomWords = allRandomWords.filter(word => word.length <= maxLength);
-    const totalLetters = isMobile ? 20 : 40;
-
-    for (let i = 0; i < totalLetters; i++) {
+    const randomWords = ["xd", "jamon", "wach0s", "abc", "max", "zzz"];
+    for (let i = 0; i < letterCount; i++) {
         const span = document.createElement("span");
         span.textContent = Math.random().toString(36).substring(2, 3);
         span.style.position = "absolute";
@@ -88,35 +87,29 @@ export async function createCodeParticles() {
         span.style.top = Math.random() * 100 + "%";
         span.style.color = particleColor;
         span.style.fontFamily = "monospace";
-        span.style.fontSize = (14 + Math.random() * 20) + "px";
+        span.style.fontSize = (isMobile ? 12 + Math.random() * 8 : 14 + Math.random() * 20) + "px";
         span.style.userSelect = "none";
         codeTextContainer.appendChild(span);
 
         const anim = anime({
             targets: span,
-            translateY: [-100, 1000],
-            duration: 7000 + Math.random() * 4000,
+            translateY: [-100, window.innerHeight + 200],
+            duration: (isMobile ? 9000 : 7000) + Math.random() * 4000,
             loop: true,
             easing: "linear"
         });
         activeAnimations.animeInstances.push(anim);
 
-        // Animación de cambio de texto (más eficiente)
-        const intervalDuration = 8000 + Math.random() * 4000; // 8–12 s
         const intervalId = setInterval(() => {
-            // 10 % de probabilidad de cambiar el texto en cada ciclo
             if (Math.random() < 0.1) {
                 span.textContent = randomWords[Math.floor(Math.random() * randomWords.length)];
             } else {
-                // letra aleatoria (como antes)
                 span.textContent = Math.random().toString(36).substring(2, 3);
             }
-        }, intervalDuration);
+        }, 8000 + Math.random() * 4000);
         activeAnimations.intervals.push(intervalId);
-
     }
 
-    // Activar fade-in luego de cargar todo
     requestAnimationFrame(() => {
         particlesContainer.style.opacity = 1;
         codeTextContainer.style.opacity = 1;
@@ -130,9 +123,7 @@ function handleProfileImageMove(e) {
     const x = e.clientX - left - width / 2;
     const y = e.clientY - top - height / 2;
     const factor = 0.05;
-    const rotateY = x * factor;
-    const rotateX = -y * factor;
-    img.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
+    img.style.transform = `rotateX(${-y * factor}deg) rotateY(${x * factor}deg)`;
 }
 
 function handleProfileImageLeave(e) {
@@ -146,10 +137,9 @@ export function initializeProfileImageTilt() {
     if (window.innerWidth < 768) return; // 🔸 Evita tilt en móviles
     const img = document.querySelector(".profile-image");
     if (img) {
-        activeAnimations.profileImageTilt.element = img;
-        const moveHandler = (e) => handleProfileImageMove(e);
-        const leaveHandler = (e) => handleProfileImageLeave(e);
-        activeAnimations.profileImageTilt.handlers = { moveHandler, leaveHandler };
+        const moveHandler = handleProfileImageMove;
+        const leaveHandler = handleProfileImageLeave;
+        activeAnimations.profileImageTilt = { element: img, handlers: { moveHandler, leaveHandler } };
         img.addEventListener("mousemove", moveHandler);
         img.addEventListener("mouseleave", leaveHandler);
     }

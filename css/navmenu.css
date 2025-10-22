@@ -1,66 +1,88 @@
 /* --- NAVBAR --- */
 .navbar {
-    background-color: rgba(255, 255, 255, 0.9);
+    background-color: var(--navbar-light-background-blurred);
     backdrop-filter: blur(10px);
     transition: background-color 0.3s ease, color 0.3s ease;
+    border-bottom: var(--navbar-light-border-bottom);
 }
 
 .navbar .nav-link {
-    color: #333;
+    color: var(--light-brand-name-color);
     transition: color 0.3s ease;
 }
 
 .navbar .nav-link:hover {
-    color: #0d6efd;
+    color: var(--bootstrap-blue);
 }
 
 /* --- DARK MODE --- */
 body.dark-mode .navbar {
-    background-color: rgba(18, 18, 18, 0.9);
+    background-color: var(--navbar-dark-background-blurred);
     backdrop-filter: blur(10px);
-    border-bottom: 1px solid #333;
+    border-bottom: var(--navbar-dark-border-bottom);
 }
 
 body.dark-mode .nav-link {
-    color: #f1f1f1;
+    color: var(--dark-text-color);
 }
 
 body.dark-mode .nav-link:hover {
-    color: #00ff99; /* verde neón tipo highlight */
+    color: var(--dark-nav-link-hover-color);
 }
 
 /* --- ICONOS (globo y sol/luna) --- */
 .nav-icon {
-    color: #333;
+    color: var(--light-brand-name-color);
     transition: color 0.3s ease;
 }
 
 body.dark-mode .nav-icon {
-    color: #ddd !important;
+    color: var(--dark-nav-icon-color) !important;
 }
 
 body.dark-mode .nav-icon:hover {
-    color: #00ff99 !important;
+    color: var(--dark-nav-link-hover-color) !important; /* El color ya tiene !important desde app.css */
+    text-shadow: var(--bootstrap-blue-neon-shadow);
 }
 
 /* --- BOTÓN HAMBURGUESA --- */
 .navbar-toggler {
     border: none;
-    filter: invert(0);
-    transition: filter 0.3s ease;
+    /* Eliminamos la propiedad transition completamente para evitar conflictos */
 }
 
 body.dark-mode .navbar-toggler {
-    filter: invert(1); /* invierte el ícono del menú para que se vea en fondo oscuro */
 }
 
-/* --- MARCA (Título) --- */
+/* --- MARCA (Título) */
 .brand-name {
-    color: #333 !important;
-    font-weight: 700;
+    color: var(--light-brand-name-color) !important;
+    font-weight: var(--font-weight-bold);
     transition: color 0.3s ease;
 }
 
 body.dark-mode .brand-name {
-    color: #f1f1f1 !important;
+    color: var(--dark-text-color) !important;
+}
+
+/* === Ajustes responsive solo para MOBILE === */
+@media (max-width: 768px) {
+
+    /* 1️⃣ Evita que el navbar tape la intro */
+    body {
+        padding-top: 90px; /* ajustá si sigue tapando un poco */
+    }
+
+    /* 2️⃣ Corrige visibilidad del icono hamburguesa */
+    .navbar.navbar-light .navbar-toggler-icon {
+        filter: none !important; /* Aseguramos que no haya filtros aplicados al icono */
+        background-color: transparent !important; /* Aseguramos que no haya color de fondo */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23333333' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* Gris oscuro en modo claro */
+    }
+
+    .navbar.navbar-dark .navbar-toggler-icon {
+        filter: none !important; /* Aseguramos que no haya filtros aplicados al icono */
+        background-color: transparent !important; /* Aseguramos que no haya color de fondo */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='%23FFFFFF' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e") !important; /* Blanco en modo oscuro */
+    }
 }
