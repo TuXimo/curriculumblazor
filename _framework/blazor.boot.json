@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CV_Blazor",
   "resources": {
-    "hash": "sha256-4SZ9c96/57GHlvElQQzFAwz/IZj5QfmXOkwmMckaR9c=",
+    "hash": "sha256-jZdc6vxsOR0En3Y+ATrFXVkQ8FUjXkG4zzh42yc0wHM=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-9Fzd5We95Rp03dEKIAbYjPDR3eWyLbmjMlYStvxyiok="
     },
@@ -52,14 +52,14 @@
       "System.Web.HttpUtility.wasm": "sha256-tleXqRu3PskvBSbXgj1TRvFQXzrU44c8N0xHnAyoDnY=",
       "netstandard.wasm": "sha256-nX98oTPT7JIAKVnQnbBmocmO8pmtdN4mFth6ABbY4+I=",
       "System.Private.CoreLib.wasm": "sha256-/gbDMKzoXrr3f+HNVTprrV6Dd7uTQ3NzjFeMUDkZ9IU=",
-      "CV_Blazor.wasm": "sha256-JSO2tDGh40MQmvaFZMxpkFGj8KbWKUradjgaQfPFpN4="
+      "CV_Blazor.wasm": "sha256-2VIi6rJH1/X6EoSUxsAPRA1CjPv4YGf0cfGzU6yzMUA="
     },
     "satelliteResources": {
       "en-US": {
-        "CV_Blazor.resources.wasm": "sha256-XVuQFjFejKuBUKGXOSs28e6pSOWbhr2bZe5XSHUHfjk="
+        "CV_Blazor.resources.wasm": "sha256-sUBwE4Qjg7N1IANikkcrg6KEH95vf87bo4giVebx2W8="
       },
       "es-ES": {
-        "CV_Blazor.resources.wasm": "sha256-XZU5JbEfdOSnwx78K9Ct1/Gil3liFwt04E1wtLNpD84="
+        "CV_Blazor.resources.wasm": "sha256-qufqmENwUX0yBxSoPlBRZVg8YCj7/HRcfHidnt+qY/8="
       }
     }
   },

@@ -207,3 +207,15 @@ body.dark-mode .project-technologies i {
 body.dark-mode .project-card .btn-hover-effect {
     background-color: var(--dark-card-background);
 }
+
+/* Fix for light mode button visibility */
+.project-card .btn-primary {
+    background-color: #0d6efd; /* Standard Bootstrap primary blue */
+    color: #ffffff;
+    border-color: #0d6efd;
+}
+
+.project-card .btn-primary:hover {
+    background-color: #0b5ed7;
+    border-color: #0a58ca;
+}
