@@ -56,8 +56,10 @@
         window.addEventListener("load", () => {
             const overlay = document.getElementById("loading-overlay");
             if (overlay) {
-                overlay.classList.add("fade-out");
-                setTimeout(() => overlay.remove(), 300); // reduced delay for SEO
+                setTimeout(() => {
+                    overlay.classList.add("fade-out");
+                    setTimeout(() => overlay.remove(), 1000); // lo remueve del DOM después del fade
+                }, 800); // pequeño delay para que se vea la animación
             }
         });
     </script>
