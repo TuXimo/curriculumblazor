@@ -4,7 +4,14 @@ html, body {
     transition: background-color 0.3s ease, color 0.3s ease;    
     overflow-x: hidden; /* Evita el scroll horizontal en toda la página */
 }
-#seo-content { display: block; visibility: hidden; height: 0; }
+
+#seo-content {
+    position: absolute;
+    left: -9999px;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+}
 
 /*
  * Corrige el anclaje de los enlaces internos para que no queden ocultos por el navbar fijo.
