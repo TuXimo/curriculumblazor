@@ -1,156 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        
-        <title>Maximo Brunetti | Portfolio</title>
 
-        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline' blob: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https://maximobrunetti.com.ar https://cdn.jsdelivr.net; object-src 'none';" />    
-        <meta name="description" content="Portfolio of Maximo Brunetti, a software developer specialized in C#, Unity, and Blazor. Discover my projects, skills, and experience in game and web development." />
-        <meta name="robots" content="index, follow" />
-    
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="Maximo Brunetti | Portfolio" />
-        <meta property="og:description" content="Software developer skilled in C#, Unity, and Blazor. Explore my projects and experience in web and game development." />
-        <meta property="og:image" content="https://maximobrunetti.com.ar/img/profile.jpg" />
-        <meta property="og:url" content="https://maximobrunetti.com.ar" />
-    
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Maximo Brunetti | Portfolio" />
-        <meta name="twitter:description" content="Software developer specialized in C#, Unity, and Blazor. See my portfolio and recent projects." />
-        <meta name="twitter:image" content="https://maximobrunetti.com.ar/img/profile.jpg" />
-    
-        <link rel="icon" href="favicon.png" type="image/x-icon" />
-    
-        <link rel="preconnect" href="https://cdnjs.cloudflare.com">
-        <link rel="preconnect" href="https://cdn.jsdelivr.net">
-    
-        <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
-        <link rel="stylesheet" href="css/variables.css" />
-        <link rel="stylesheet" href="css/app.css" />
-        <link rel="preload" href="css/skills.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="css/skills.css" /></noscript>
-        <link rel="preload" href="css/about-me.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="css/about-me.css" /></noscript>
-        <link rel="preload" href="css/projects.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="css/projects.css" /></noscript>
-        <link rel="preload" href="css/navmenu.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" href="css/navmenu.css" /></noscript>
-        <link rel="preload" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" />
-        <noscript><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /></noscript>
-        <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <script>
-            window.blazorCulture = {
-                get: () => window.localStorage['BlazorCulture'],
-                set: (value) => window.localStorage['BlazorCulture'] = value,
-                getBrowserLanguage: () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
-            };
+    <title>Maximo Brunetti | Portfolio</title>
 
-            // Lógica para determinar y aplicar la cultura antes de que Blazor inicie (CRÍTICO para SupportedCultures)
-            (function () {
-                const defaultCulture = "en-US";
-                let cultureCode = defaultCulture;
+    <meta name="description" content="Portfolio of Maximo Brunetti, a software developer specialized in C#, Unity, and Blazor. Discover my projects, skills, and experience in game and web development." />
+    <meta name="robots" content="index, follow" />
 
-                // 1. Obtener la cultura guardada o predeterminada
-                const urlParams = new URLSearchParams(window.location.search);
-                const langQuery = urlParams.get('lang');
-                const storedCulture = window.blazorCulture.get();
-                const browserLang = window.blazorCulture.getBrowserLanguage();
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Maximo Brunetti | Portfolio" />
+    <meta property="og:description" content="Software developer skilled in C#, Unity, and Blazor. Explore my projects and experience in web and game development." />
+    <meta property="og:image" content="https://maximobrunetti.com.ar/img/profile.jpg" />
+    <meta property="og:url" content="https://maximobrunetti.com.ar" />
 
-                if (langQuery && (langQuery === 'en-US' || langQuery === 'es-ES')) {
-                    cultureCode = langQuery;
-                } else if (storedCulture) {
-                    cultureCode = storedCulture;
-                } else {
-                    cultureCode = browserLang && browserLang.startsWith("es") ? "es-ES" : defaultCulture;
-                }
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Maximo Brunetti | Portfolio" />
+    <meta name="twitter:description" content="Software developer specialized in C#, Unity, and Blazor. See my portfolio and recent projects." />
+    <meta name="twitter:image" content="https://maximobrunetti.com.ar/img/profile.jpg" />
 
-                // 2. Guardar en localStorage
-                window.blazorCulture.set(cultureCode);
+    <link rel="icon" href="favicon.png" type="image/x-icon" />
 
-                // 3. Establecer la cultura en el DOM para que Blazor la use al iniciar (la forma más compatible con SupportedCultures)
-                if (cultureCode) {
-                    document.documentElement.lang = cultureCode;
-                    // También se usa un atributo data-culture para compatibilidad, aunque no es el método meta http-equiv
-                    document.documentElement.setAttribute('data-culture', cultureCode);
-                }
-            })();
-        </script>
-    
-        <script>
-            window.addEventListener("load", () => {
-                const overlay = document.getElementById("loading-overlay");
-                if (overlay) {
-                    setTimeout(() => {
-                        overlay.classList.add("fade-out");
-                        setTimeout(() => overlay.remove(), 1000); // lo remueve del DOM después del fade
-                    }, 800); // pequeño delay para que se vea la animación
-                }
-            });
-        </script>
-    
-        <noscript>
-            <h1>Maximo Brunetti - Portfolio</h1>
-    
-            <p>Desarrollador web especializado en Blazor, C# y front-end moderno.</p>
-        </noscript>
-    
-        <noscript>
-            <p>This site uses Blazor WebAssembly. Please enable JavaScript to view all content.</p>
-        </noscript>
-    </head>
-    
-    
-    <body>
-    
-    <div id="seo-content">
-        <h1>Maximo Brunetti | Software Developer</h1>
-        <p>
-            Portfolio of Maximo Brunetti, a developer specialized in C#, Unity and Blazor.
-            Explore projects, skills and experience in game and web development.
-        </p>
-        <ul>
-            <li>💻 Web development with Blazor</li>
-            <li>🎮 Game development with Unity</li>
-            <li>🚀 Featured projects and portfolio showcase</li>
-        </ul>
-    </div>
-    
-    
-    <div id="app">
-        <div class="loading-overlay" id="loading-overlay">
-            <div class="loader-computer">
-                <div class="monitor">
-                    <div class="screen">
-                        <span class="cursor"></span>
-                    </div>
+    <link rel="preconnect" href="https://cdnjs.cloudflare.com">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+    <link rel="stylesheet" href="css/bootstrap/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/variables.css" />
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/skills.css" />
+    <link rel="stylesheet" href="css/about-me.css" />
+    <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/navmenu.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <script>
+        window.blazorCulture = {
+            get: () => window.localStorage['BlazorCulture'],
+            set: (value) => window.localStorage['BlazorCulture'] = value,
+            getBrowserLanguage: () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
+        };
+    </script>
+
+    <script>
+        window.addEventListener("load", () => {
+            const overlay = document.getElementById("loading-overlay");
+            if (overlay) {
+                setTimeout(() => {
+                    overlay.classList.add("fade-out");
+                    setTimeout(() => overlay.remove(), 1000); // lo remueve del DOM después del fade
+                }, 800); // pequeño delay para que se vea la animación
+            }
+        });
+    </script>
+
+    <noscript>
+        <h1>Maximo Brunetti - Portfolio</h1>
+
+        <p>Desarrollador web especializado en Blazor, C# y front-end moderno.</p>
+    </noscript>
+
+    <noscript>
+        <p>This site uses Blazor WebAssembly. Please enable JavaScript to view all content.</p>
+    </noscript>
+</head>
+
+
+<body>
+
+<div id="seo-content">
+    <h1>Maximo Brunetti | Software Developer</h1>
+    <p>
+        Portfolio of Maximo Brunetti, a developer specialized in C#, Unity and Blazor.
+        Explore projects, skills and experience in game and web development.
+    </p>
+    <ul>
+        <li>💻 Web development with Blazor</li>
+        <li>🎮 Game development with Unity</li>
+        <li>🚀 Featured projects and portfolio showcase</li>
+    </ul>
+</div>
+
+
+<div id="app">
+    <div class="loading-overlay" id="loading-overlay">
+        <div class="loader-computer">
+            <div class="monitor">
+                <div class="screen">
+                    <span class="cursor"></span>
                 </div>
-                <div class="stand"></div>
-                <div class="base"></div>
             </div>
-            <p class="loading-message">Loading...</p>
+            <div class="stand"></div>
+            <div class="base"></div>
         </div>
+        <p class="loading-message">Loading...</p>
     </div>
-    
-    
-    
-    
-    <div id="blazor-error-ui">
-        An unhandled error has occurred.
-        <a href="" class="reload">Reload</a>
-        <a class="dismiss">🗙</a>
-    </div>
-    
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
-    <script src="js/clipboard.js" defer></script>
-    <script src="js/site.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" defer></script>
-    
-    <script src="_framework/blazor.webassembly.js"></script>
-    </body>
+</div>
+
+
+
+
+<div id="blazor-error-ui">
+    An unhandled error has occurred.
+    <a href="" class="reload">Reload</a>
+    <a class="dismiss">🗙</a>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous" defer></script>
+<script src="js/clipboard.js" defer></script>
+<script src="js/site.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/tsparticles@2/tsparticles.bundle.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/animejs@3.2.1/lib/anime.min.js" defer></script>
+
+<script src="_framework/blazor.webassembly.js"></script>
+</body>
 
 </html>
