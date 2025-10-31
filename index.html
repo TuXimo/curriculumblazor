@@ -3,9 +3,10 @@
     <head>
         <meta charset="utf-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
+        
         <title>Maximo Brunetti | Portfolio</title>
-    
+
+        <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'wasm-unsafe-eval' 'unsafe-inline' blob: https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; font-src 'self' https://cdn.jsdelivr.net https://cdnjs.cloudflare.com; img-src 'self' data: https://maximobrunetti.com.ar https://cdn.jsdelivr.net; object-src 'none';" />    
         <meta name="description" content="Portfolio of Maximo Brunetti, a software developer specialized in C#, Unity, and Blazor. Discover my projects, skills, and experience in game and web development." />
         <meta name="robots" content="index, follow" />
     
@@ -40,13 +41,43 @@
         <noscript><link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" /></noscript>
         <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" /></noscript>
-    
+
         <script>
             window.blazorCulture = {
                 get: () => window.localStorage['BlazorCulture'],
                 set: (value) => window.localStorage['BlazorCulture'] = value,
                 getBrowserLanguage: () => (navigator.languages && navigator.languages.length) ? navigator.languages[0] : navigator.language
             };
+
+            // Lógica para determinar y aplicar la cultura antes de que Blazor inicie (CRÍTICO para SupportedCultures)
+            (function () {
+                const defaultCulture = "en-US";
+                let cultureCode = defaultCulture;
+
+                // 1. Obtener la cultura guardada o predeterminada
+                const urlParams = new URLSearchParams(window.location.search);
+                const langQuery = urlParams.get('lang');
+                const storedCulture = window.blazorCulture.get();
+                const browserLang = window.blazorCulture.getBrowserLanguage();
+
+                if (langQuery && (langQuery === 'en-US' || langQuery === 'es-ES')) {
+                    cultureCode = langQuery;
+                } else if (storedCulture) {
+                    cultureCode = storedCulture;
+                } else {
+                    cultureCode = browserLang && browserLang.startsWith("es") ? "es-ES" : defaultCulture;
+                }
+
+                // 2. Guardar en localStorage
+                window.blazorCulture.set(cultureCode);
+
+                // 3. Establecer la cultura en el DOM para que Blazor la use al iniciar (la forma más compatible con SupportedCultures)
+                if (cultureCode) {
+                    document.documentElement.lang = cultureCode;
+                    // También se usa un atributo data-culture para compatibilidad, aunque no es el método meta http-equiv
+                    document.documentElement.setAttribute('data-culture', cultureCode);
+                }
+            })();
         </script>
     
         <script>
