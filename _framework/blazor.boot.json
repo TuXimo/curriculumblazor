@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "CV_Blazor",
   "resources": {
-    "hash": "sha256-iXJgvHwEK75rohpVvR7raIagngG6bMxGDds1OtbPVEw=",
+    "hash": "sha256-T2q/mooXy52HPtjY4Z7F0kYMsGlpIGswDYHxlbVRPrI=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-9Fzd5We95Rp03dEKIAbYjPDR3eWyLbmjMlYStvxyiok="
     },
@@ -52,7 +52,7 @@
       "System.Text.RegularExpressions.wasm": "sha256-tCTxwg2N3nkoTMDAtfc+X4iVUDF7K9iBuzpAhgC284E=",
       "netstandard.wasm": "sha256-nX98oTPT7JIAKVnQnbBmocmO8pmtdN4mFth6ABbY4+I=",
       "System.Private.CoreLib.wasm": "sha256-XRRfR3LoGbfzmXCrNph18p0pM7UwKxXbX2xS993FA5c=",
-      "CV_Blazor.wasm": "sha256-GXQO7vP8QSneZfkzsH2J4QzUCTfkGDk+/KrVGr8BOgo="
+      "CV_Blazor.wasm": "sha256-pZQWlvho9Nn52VEOtF9C3AFEhvLSbCirXK/EZy9Qe+0="
     },
     "satelliteResources": {
       "en-US": {
