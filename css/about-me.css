@@ -120,14 +120,4 @@ body.dark-mode .profile-image {
     .profile-image-container {
         display: none;
     }
-
-    /* 4️⃣ Corrige el ícono hamburguesa en modo claro */
-    .navbar-light .navbar-toggler-icon {
-        /* Eliminadas las reglas de background-image de aquí */
-    }
-
-    /* 5️⃣ Y en modo oscuro, que siga siendo blanca */
-    body.dark-mode .navbar-toggler-icon {
-        /* Eliminadas las reglas de background-image de aquí */
-    }
 }
